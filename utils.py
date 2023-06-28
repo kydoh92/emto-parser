@@ -23,6 +23,9 @@ def equalint(f,N=4,s=3):
 		return int(token[0][:s])
 	return map(lambda x:int(x[:s]),token)
 
+def equalmix(f):
+	return map(lambda x: x.split()[0],map(lambda x: x.strip(),f.readline().split('=')[1:]))
+
 def bracomfloat(f,N=3,s=10):
 	token = f.readline().lstrip().lstrip('(').split(',')[:N]
 	if N == 1:
@@ -32,7 +35,35 @@ def bracomfloat(f,N=3,s=10):
 def colonspacestring(f):
 	token = f.readline().split(': ')
 	return token[1].strip()
-	
+
+def namestr(obj, namespace):
+	print('something')
+	print(obj)
+	print(namespace)
+	get_name=[name for name in namespace if namespace[name] is obj]
+	print(get_name)
+	return get_name[0]
+
+def Cleaning(list_data):
+	list_clean = []
+	for line in list_data:
+		stripline = line.strip()
+		if line.lstrip() == '':
+			pass
+		elif 'Hard test' in line:
+			pass
+		elif 'WARNING: ' in line:
+			pass
+		elif 'Atomic ch' in line:
+			pass
+		elif 'Potential' in line:
+			pass
+		elif 'Linear lo' in line:
+			pass
+		else:
+			list_clean.append(line)
+	return list_clean
+
 ### special functions ###
 
 def head_timestamp(f):
@@ -41,6 +72,14 @@ def head_timestamp(f):
 	s_dby = f.readline()[70:].rstrip()
 	# convert string to time object
 	time_object = strptime(s_HM+s_dby, "%H:%M%d-%b-%y")
+	timestamp = mktime(time_object)
+	return timestamp
+
+def kgrn_headtime(f):
+	# read time
+	s_HM_dby = f.readline()[61:].rstrip()
+	# convert string to time object
+	time_object = strptime(s_HM_dby, "%H:%M / %d-%b-%y")
 	timestamp = mktime(time_object)
 	return timestamp
 
@@ -82,6 +121,9 @@ def round0(v):
     return round(v,10)
 
 ### alias ###
+
+def em(f):
+	return equalmix(f)
 
 def e3f(f,s=10):
 	return equalfloat(f,3,s)
