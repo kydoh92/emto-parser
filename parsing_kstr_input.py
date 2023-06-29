@@ -40,6 +40,10 @@ def L10(f, NQ):
 	Basis = list(map(lambda x: list(ut.e3f(f)),range(NQ)))
 	return Basis
 
+def L14(f, NQ):
+	AW = list(map(lambda x: list(tokenizer(f, even=0)),range(NQ)))
+	return AW
+
 #### MAIN ####
 
 # Read and parse a text
@@ -65,8 +69,7 @@ A, B, C = ut.e3f(f)
 Lattice, ALPHA, BETA, GAMMA = L9(f, IPRIM, A, B, C)
 Basis = L10(f,NQ)
 
-l14 = tokenizer(f, even=0)
-AW = list(map(float, l14))
+AW = L14(f, NQ)
 
 l15 = tokenizer(f)
 LAMDA, AMAX, BMAX = list(map(float, l15))
