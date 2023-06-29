@@ -1,6 +1,7 @@
 #!/usr/local/anaconda3/bin/python
 import sys
 import numpy as np
+import re
 from numpy import sin, cos, sqrt
 from time import strptime, mktime
 from math import pi, acos
@@ -15,13 +16,13 @@ def equalfloat(f,N=3,s=10):
 	token = f.readline().split('=')[1:N+1]
 	if N == 1:
 		return float(token[0][:s])
-	return map(lambda x:float(x[:s]),token)
+	return list(map(lambda x:float(x[:s]),token))
 
 def equalint(f,N=4,s=3):
 	token = f.readline().split('=')[1:N+1]
 	if N == 1:
 		return int(token[0][:s])
-	return map(lambda x:int(x[:s]),token)
+	return list(map(lambda x:int(x[:s]),token))
 
 def bracomfloat(f,N=3,s=10):
 	token = f.readline().lstrip().lstrip('(').split(',')[:N]
@@ -32,6 +33,26 @@ def bracomfloat(f,N=3,s=10):
 def colonspacestring(f):
 	token = f.readline().split(': ')
 	return token[1].strip()
+
+def getint(f, token=None):
+    if token is None:
+        token = f.readline()
+    int_list = [int(s) for s in re.findall(r"[-+]?\d*\.\d+|\d+", token)]
+    return int_list
+
+def getfloat(f, token=None):
+    if token is None:
+        token = f.readline()
+    float_list = [float(s) for s in re.findall(r"[-+]?\d*\.\d+|\d+", token)]
+    return float_list
+
+def getstring_withoutequal(f, token=None):
+    if token is None:
+        token = f.readline()
+    str_list = [s for s in token.split() if not re.match(r"[-+]?\d*\.\d+|\d+", s)]
+    str_list_2 = [s for s in str_list if s != '=' and s != ':']
+    str_list_3 = [s.replace('=','') for s in str_list_2]
+    return str_list_3
 	
 ### special functions ###
 

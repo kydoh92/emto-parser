@@ -15,13 +15,13 @@ def equalfloat(f,N=3,s=10):
 	token = f.readline().split('=')[1:N+1]
 	if N == 1:
 		return float(token[0][:s])
-	return map(lambda x:float(x[:s]),token)
+	return list(map(lambda x:float(x[:s]),token))
 
 def equalint(f,N=4,s=3):
 	token = f.readline().split('=')[1:N+1]
 	if N == 1:
 		return int(token[0][:s])
-	return map(lambda x:int(x[:s]),token)
+	return list(map(lambda x:int(x[:s]),token))
 
 def bracomfloat(f,N=3,s=10):
 	token = f.readline().lstrip().lstrip('(').split(',')[:N]
