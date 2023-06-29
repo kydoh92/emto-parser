@@ -1,0 +1,7 @@
+SHAPE     HP......=N                            25.12.2021
+JOBNAM...=lat_bcc    MSGL.=  1
+FOR001=../../kstr/lat_bcc/smx/lat_bcc.tfh
+DIR002=shp/
+DIR006=prn/
+Lmax..= 30 NSR..=129 NFI..= 11
+NPRN..=  0 IVEF.=  3

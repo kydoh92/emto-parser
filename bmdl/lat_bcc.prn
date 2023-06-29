@@ -1,0 +1,59 @@
+ FHNDLR:   Program: BMDL, Version: LV  05 Mar 1999                   TM: 14:29
+           Madelung potential for lat_bcc                            03-Dec-21  
+
+           JOB   : lat_bcc   
+           FOR001: mdl/lat_bcc.mdl                                             
+           FOR006: prn/lat_bcc.prn                                             
+ 
+       EMTO versio: not available
+ current branch on: not available
+   commit hash key: not available
+        compile on: Thu Apr  9 21:06:12 KST 2020
+           OS info: Linux 3.10.0-957.el7.x86_64 x86_64 GNU/Linux
+          CPU-info: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+     compiler-info: ifort (IFORT) 18.0.5 20180823
+   BLAS and LAPACK: mkl
+
+ PRIMV:    Special choice of primitive vectors.
+
+           A     =  1.000000 B     =  1.000000 C     =  1.000000
+
+           Primitive vectors for Bcc lattice in
+           units of the lattice spacing a:
+
+           (   0.50000,   0.50000,  -0.50000 )
+           (   0.50000,  -0.50000,   0.50000 )
+           (  -0.50000,   0.50000,   0.50000 )
+
+           Basis vectors:            NQ3 =   1
+
+           (   0.00000,   0.00000,   0.00000 )
+
+
+ PRIMKR:   Wigner Seitz radius:  0.492373 VOL   =  0.500000
+
+
+           Primitive vectors of reciprocal space
+           in units of 2*pi/a
+
+           (  -1.00000,  -1.00000,   0.00000  )
+           (  -1.00000,   0.00000,  -1.00000  )
+           (   0.00000,  -1.00000,  -1.00000  )
+
+ SET3D:    Basis vectors in 3D cell are set.
+
+ BMDL:     NPRN  =  0
+           NL    =  7 NQ    =  1 NLM   = 49 NLMQ  = 49
+           MSGL  =  1
+
+           AMAX  =  4.500000 BMAX  =  4.500000 ALAMDA=  2.500000
+           RMAX  =  1.800000 GMAX  = 22.500000
+
+ LATT3M:   R1    =    0.0000 RA    =    1.8000 G1    =    0.0000
+           GA    =   22.5000
+
+           NUMR  =  7 NUMG  =  9 NUMVR = 59 NUMVG = 87
+
+ BMDL:    CMDL=    1.7918585116
+
+           Madelung-potential matrices stored on FOR001

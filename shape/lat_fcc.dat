@@ -1,0 +1,7 @@
+SHAPE     HP......=N                            22.5.2023
+JOBNAM...=lat_fcc    MSGL.=  1
+FOR001=../../kstr/lat_fcc/smx/lat_fcc.tfh
+DIR002=shp/
+DIR006=prn/
+Lmax..= 30 NSR..=129 NFI..= 11
+NPRN..=  0 IVEF.=  3
