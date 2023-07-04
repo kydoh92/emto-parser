@@ -2,6 +2,7 @@
 import sys
 import numpy as np
 import utils as ut
+from utils import tokenizer
 from utils import flush
 import json
 import re
