@@ -47,7 +47,7 @@ def L14(f, NQ):
 #### MAIN ####
 
 # Read and parse a text
-filename='kstr_in_sample.dat'
+filename=sys.argv[1]
 f = open(filename,'r')
 
 flush(f,1)
