@@ -1,0 +1,64 @@
+ FHNDLR:   Program: BMDL, Version: LV  05 Mar 1999                   TM: 01:51
+           Madelung potential for 6_FCC                              28-Feb-23  
+
+           JOB   : 6_FCC     
+           FOR001: mdl/6_FCC.mdl                                               
+           FOR006: prn/6_FCC.prn                                               
+ 
+       EMTO versio: not available
+ current branch on: not available
+   commit hash key: not available
+        compile on: Thu Apr  9 21:06:12 KST 2020
+           OS info: Linux 3.10.0-957.el7.x86_64 x86_64 GNU/Linux
+          CPU-info: Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz
+     compiler-info: ifort (IFORT) 18.0.5 20180823
+   BLAS and LAPACK: mkl
+
+ PRIMV:    Special choice of primitive vectors.
+
+           A     =  1.000000 B     =  1.000000 C     =  4.898980
+
+           Primitive vectors forTric lattice in
+           units of the lattice spacing a:
+
+           (   1.00000,   0.00000,   0.00000 )
+           (   0.50000,   0.86603,   0.00000 )
+           (   0.00000,   0.00000,   4.89898 )
+
+           Basis vectors:            NQ3 =   6
+
+           (   0.00000,   0.00000,   0.00000 )
+           (   0.50000,   0.28868,   0.81650 )
+           (   1.00000,   0.57735,   1.63299 )
+           (   0.00000,   0.00000,   2.44949 )
+           (   0.50000,   0.28868,   3.26599 )
+           (   1.00000,   0.57735,   4.08248 )
+
+
+ PRIMKR:   Wigner Seitz radius:  0.552669 VOL   =  4.242641
+
+
+           Primitive vectors of reciprocal space
+           in units of 2*pi/a
+
+           (   1.00000,  -0.57735,   0.00000  )
+           (   0.00000,   1.15470,   0.00000  )
+           (   0.00000,   0.00000,   0.20412  )
+
+ SET3D:    Basis vectors in 3D cell are set.
+
+ BMDL:     NPRN  =  0
+           NL    =  7 NQ    =  6 NLM   = 49 NLMQ  =294
+           MSGL  =  1
+
+           AMAX  =  4.500000 BMAX  =  4.500000 ALAMDA=  2.500000
+           RMAX  =  1.800000 GMAX  = 22.500000
+
+ LATT3M:   R1    =    4.2469 RA    =    6.0469 G1    =    0.0000
+           GA    =   22.5000
+
+           NUMR  = 15 NUMG  = 37 NUMVR =213 NUMVG =851
+
+ BMDL:    CMDL=    1.7917472307
+
+           Madelung-potential matrices stored on FOR001

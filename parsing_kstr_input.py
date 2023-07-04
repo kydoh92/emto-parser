@@ -1,17 +1,10 @@
 #!/usr/local/anaconda3/bin/python
 import sys
 import utils as ut
+from utils import tokenizer
 from utils import flush
 import json
 import re
-
-def tokenizer(f, even=1):
-    string = f.readline().replace('=',' ').replace('\n','')
-    rr = re.sub(' +', ' ', string).split(' ')
-    if even == 1:
-        return rr[1::2]
-    if even == 0:
-        return rr[1:]
 
 def L7(f):
 	string = f.readline()
@@ -47,7 +40,7 @@ def L14(f, NQ):
 #### MAIN ####
 
 # Read and parse a text
-filename=sys.argv[1]
+filename = sys.argv[1]
 f = open(filename,'r')
 
 flush(f,1)
@@ -118,5 +111,6 @@ Input = {
 }
 #print(Input)
 # Save as a json file
-with open(JOBNAM+'_kstr'+'_in.json', 'w') as f:
+output_path = './output_file/'
+with open(output_path+JOBNAM+'_kstr'+'_in.json', 'w') as f:
     json.dump(Input, f, indent=2)

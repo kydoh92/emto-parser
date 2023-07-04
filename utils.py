@@ -4,8 +4,17 @@ import numpy as np
 from numpy import sin, cos, sqrt
 from time import strptime, mktime
 from math import pi, acos
+import re
 
 ### general functions ###
+
+def tokenizer(f, even=1):
+    string = f.readline().replace('=',' ').replace('\n','')
+    rr = re.sub(' +', ' ', string).split(' ')
+    if even == 1:
+        return rr[1::2]
+    if even == 0:
+        return rr[1:]
 
 def flush(f,N=1):
 	for i in range(N):
@@ -68,8 +77,8 @@ def Cleaning(list_data):
 
 def head_timestamp(f):
 	# read time
-	s_HM = f.readline()[74:].rstrip()
-	s_dby = f.readline()[70:].rstrip()
+	s_HM = f.readline()[62:].rstrip()
+	s_dby = f.readline()[69:].rstrip()
 	# convert string to time object
 	time_object = strptime(s_HM+s_dby, "%H:%M%d-%b-%y")
 	timestamp = mktime(time_object)
