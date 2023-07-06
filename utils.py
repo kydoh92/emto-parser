@@ -6,34 +6,34 @@ from time import strptime, mktime
 from math import pi, acos
 
 ### general functions ###
-
+'''
 def flush(f,N=1):
 	for i in range(N):
 		f.readline()
-
-def equalfloat(f,N=3,s=10):
-	token = f.readline().split('=')[1:N+1]
+'''
+def equalfloat(string,N=3,s=10):
+	token = string.split('=')[1:N+1]
 	if N == 1:
 		return float(token[0][:s])
 	return map(lambda x:float(x[:s]),token)
 
-def equalint(f,N=4,s=3):
-	token = f.readline().split('=')[1:N+1]
+def equalint(string,N=4,s=3):
+	token = string.split('=')[1:N+1]
 	if N == 1:
 		return int(token[0][:s])
 	return map(lambda x:int(x[:s]),token)
 
-def equalmix(f):
-	return map(lambda x: x.split()[0],map(lambda x: x.strip(),f.readline().split('=')[1:]))
+def equalmix(string):
+	return map(lambda x: x.split()[0],map(lambda x: x.strip(),string.split('=')[1:]))
 
-def bracomfloat(f,N=3,s=10):
-	token = f.readline().lstrip().lstrip('(').split(',')[:N]
+def bracomfloat(string,N=3,s=10):
+	token = string.lstrip().lstrip('(').split(',')[:N]
 	if N == 1:
 		return list(float(token[0][:s]))
 	return list(map(lambda x:float(x[:s]),token))
 
-def colonspacestring(f):
-	token = f.readline().split(': ')
+def colonspacestring(string):
+	token = string.split(': ')
 	return token[1].strip()
 
 def namestr(obj, namespace):
@@ -66,18 +66,18 @@ def Cleaning(list_data):
 
 ### special functions ###
 
-def head_timestamp(f):
+def lat_headtime(string0,string1):
 	# read time
-	s_HM = f.readline()[74:].rstrip()
-	s_dby = f.readline()[70:].rstrip()
+	s_HM = string0[74:].rstrip()
+	s_dby = string1[70:].rstrip()
 	# convert string to time object
 	time_object = strptime(s_HM+s_dby, "%H:%M%d-%b-%y")
 	timestamp = mktime(time_object)
 	return timestamp
 
-def kgrn_headtime(f):
+def kgrn_headtime(string):
 	# read time
-	s_HM_dby = f.readline()[61:].rstrip()
+	s_HM_dby = string[61:].rstrip()
 	# convert string to time object
 	time_object = strptime(s_HM_dby, "%H:%M / %d-%b-%y")
 	timestamp = mktime(time_object)
