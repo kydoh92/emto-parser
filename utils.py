@@ -8,13 +8,13 @@ import re
 
 ### general functions ###
 
-def tokenizer(f, even=1):
-    string = f.readline().replace('=',' ').replace('\n','')
-    rr = re.sub(' +', ' ', string).split(' ')
+def tokenizer(string, even=1):
+    tmp = string.replace('=',' ').replace('\n','')
+    token = re.sub(' +', ' ', tmp).split(' ')
     if even == 1:
-        return rr[1::2]
+        return token[1::2]
     if even == 0:
-        return rr[1:]
+        return token[1:]
 '''
 def flush(f,N=1):
 	for i in range(N):

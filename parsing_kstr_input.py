@@ -2,72 +2,70 @@
 import sys
 import utils as ut
 from utils import tokenizer
-from utils import flush
 import json
 import re
 
-def L7(f):
-	string = f.readline()
-	NQ =    int(string[ 7:10])
-	LAT =   int(string[18:20])
-	IPRIM = int(string[28:30])
-	NQR2 =  int(string[38:40])
-	return NQ, LAT, IPRIM, NQR2
-
-def L9(f, IPRIM, A, B, C):
+def get_lattice(clines, IPRIM, A, B, C):
     if IPRIM == 1:
-        ALPHA, BETA, GAMMA = ut.e3f(f)
+        ALPHA, BETA, GAMMA = ut.e3f(clines.pop(0))
         # convert unit degree to radian
         alpha,beta,gamma = map(ut.DtoR, [ALPHA,BETA,GAMMA])
         # convert angles to lattice vectors
         Lattice =  ut.AtoV(A, B, C, alpha, beta, gamma)
     elif IPRIM == 0:
-        Lattice = list(map(lambda x: list(ut.e3f(f)),range(3)))
+        Lattice = list(map(lambda x: list(ut.e3f(clines.pop(0))),range(3)))
         # convert lattice vectors to angles
         alpha, beta, gamma = ut.VtoA(Lattice)
         # convert unit radian to degree
         ALPHA, BETA, GAMMA = map(ut.RtoD, [alpha,beta,gamma])
         return Lattice , ALPHA, BETA, GAMMA 
 
-def L10(f, NQ):
-	Basis = list(map(lambda x: list(ut.e3f(f)),range(NQ)))
+def get_basis(clines, NQ):
+	Basis = list(map(lambda x: list(ut.e3f(clines.pop(0))),range(NQ)))
 	return Basis
 
-def L14(f, NQ):
-	AW = list(map(lambda x: list(tokenizer(f, even=0)),range(NQ)))
+def get_aw(clines, NQ):
+	AW = list(map(lambda x: list(tokenizer(clines.pop(0), even=0)),range(NQ)))
 	return AW
 
 #### MAIN ####
 
 # Read and parse a text
 filename = sys.argv[1]
-f = open(filename,'r')
+with open(filename,'r') as f:
+    lines = f.readlines()
 
-flush(f,1)
-l2 = tokenizer(f)
-JOBNAM, MSGL, MODE, STORE, HIGH = l2
-MSGL = int(MSGL)
+# cleaning & get list type
+clines = ut.Cleaning(lines)
 
-flush(f,3)
+i = 1
+while clines:
+    if i in [1,3,4,5]:
+        clines.pop(0)
+        pass
+    elif i == 2:
+        JOBNAM, MSGL, MODE, STORE, HIGH = tokenizer(clines.pop(0))
+        MSGL = int(MSGL)
+    elif i == 6:
+        NL, NLH, NLW, NDER, ITRANS, NPRN = list(map(int, tokenizer(clines.pop(0))))
+    elif i == 7:
+        KAPPA, DMAX, RWATS = list(map(float, tokenizer(clines.pop(0))))
+    elif i == 8:
+        NQ, LAT, IPRIM, NGHBP, NQR2 = list(map(int, tokenizer(clines.pop(0))))
+    elif i == 9:
+        A, B, C = ut.e3f(clines.pop(0))
+        Lattice, ALPHA, BETA, GAMMA = get_lattice(clines, IPRIM, A, B, C)
+    elif i == 10:
+        Basis = get_basis(clines, NQ)
+    elif i == 11:
+        AW = get_aw(clines, NQ)
+    elif i == 12:
+        LAMDA, AMAX, BMAX = list(map(float, tokenizer(clines.pop(0))))
+    else:
+        print("clines exist")
+        clines.pop(0)
 
-l6  = tokenizer(f)
-NL, NLH, NLW, NDER, ITRANS, NPRN = list(map(int, l6))
-l7  = tokenizer(f)
-KAPPA, DMAX, RWATS = list(map(float, l7))
-
-l8  = tokenizer(f)
-NQ, LAT, IPRIM, NGHBP, NQR2 = list(map(int, l8))
-
-A, B, C = ut.e3f(f)
-Lattice, ALPHA, BETA, GAMMA = L9(f, IPRIM, A, B, C)
-Basis = L10(f,NQ)
-
-AW = L14(f, NQ)
-
-l15 = tokenizer(f)
-LAMDA, AMAX, BMAX = list(map(float, l15))
-
-f.close()
+    i += 1
 
 # Combine entities
 Input = {
