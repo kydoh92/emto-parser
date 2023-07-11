@@ -38,34 +38,28 @@ with open(filename,'r') as f:
 # cleaning & get list type
 clines = ut.Cleaning(lines)
 
-i = 1
-while clines:
-    if i in [1,3,4,5]:
-        clines.pop(0)
-        pass
-    elif i == 2:
-        JOBNAM, MSGL, MODE, STORE, HIGH = tokenizer(clines.pop(0))
-        MSGL = int(MSGL)
-    elif i == 6:
-        NL, NLH, NLW, NDER, ITRANS, NPRN = list(map(int, tokenizer(clines.pop(0))))
-    elif i == 7:
-        KAPPA, DMAX, RWATS = list(map(float, tokenizer(clines.pop(0))))
-    elif i == 8:
-        NQ, LAT, IPRIM, NGHBP, NQR2 = list(map(int, tokenizer(clines.pop(0))))
-    elif i == 9:
-        A, B, C = ut.e3f(clines.pop(0))
-        Lattice, ALPHA, BETA, GAMMA = get_lattice(clines, IPRIM, A, B, C)
-    elif i == 10:
-        Basis = get_basis(clines, NQ)
-    elif i == 11:
-        AW = get_aw(clines, NQ)
-    elif i == 12:
-        LAMDA, AMAX, BMAX = list(map(float, tokenizer(clines.pop(0))))
-    else:
-        print("clines exist")
-        clines.pop(0)
+del clines[0]
 
-    i += 1
+JOBNAM, MSGL, MODE, STORE, HIGH = tokenizer(clines.pop(0))
+MSGL = int(MSGL)
+
+del clines[0:3]
+
+NL, NLH, NLW, NDER, ITRANS, NPRN = list(map(int, tokenizer(clines.pop(0))))
+
+KAPPA, DMAX, RWATS = list(map(float, tokenizer(clines.pop(0))))
+
+NQ, LAT, IPRIM, NGHBP, NQR2 = list(map(int, tokenizer(clines.pop(0))))
+
+A, B, C = ut.e3f(clines.pop(0))
+Lattice, ALPHA, BETA, GAMMA = get_lattice(clines, IPRIM, A, B, C)
+
+Basis = get_basis(clines, NQ)
+
+AW = get_aw(clines, NQ)
+
+LAMDA, AMAX, BMAX = list(map(float, tokenizer(clines.pop(0))))
+
 
 # Combine entities
 Input = {

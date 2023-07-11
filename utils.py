@@ -8,13 +8,13 @@ import re
 
 ### general functions ###
 
-def tokenizer(string, even=1):
-    tmp = string.replace('=',' ').replace('\n','')
+def tokenizer(string, even=1, spl='='):
+    tmp = string.replace(spl,' ').replace('\n','').strip()
     token = re.sub(' +', ' ', tmp).split(' ')
     if even == 1:
         return token[1::2]
     if even == 0:
-        return token[1:]
+        return token
 '''
 def flush(f,N=1):
 	for i in range(N):
@@ -69,6 +69,8 @@ def Cleaning(list_data):
 			pass
 		elif 'Linear lo' in line:
 			pass
+		elif '***' in line:
+			pass
 		else:
 			list_clean.append(line)
 	return list_clean
@@ -78,7 +80,7 @@ def Cleaning(list_data):
 def lat_headtime(string0,string1):
 	# read time
 	s_HM = string0[62:].rstrip()
-	s_dby = string0[69:].rstrip()
+	s_dby = string1[69:].rstrip()
 	# convert string to time object
 	time_object = strptime(s_HM+s_dby, "%H:%M%d-%b-%y")
 	timestamp = mktime(time_object)
