@@ -1,0 +1,10 @@
+KFCD      MSGL..=  0                               27.10.2020
+JOBNAM...=CrMn_fcc_afm_SWS_2.600
+STRNAM...=tetra_fcc
+DIR001=../../../2_kstr/5_Zhi_Mn/0_AFM/smx/
+DIR002=../../../4_kgrn/9_Invar/3_tetra_FCC/chd/
+DIR003=../../../3_shape/5_Zhi_Mn/0_AFM/shp/
+DIR004=../../../1_bmdl/5_Zhi_Mn/0_AFM/mdl/
+DIR006=prn/
+Lmaxs.= 30 NTH..= 41 NFI..= 81 FPOT..= N
+OVCOR.=  Y UBG..=  N NPRN.=  0

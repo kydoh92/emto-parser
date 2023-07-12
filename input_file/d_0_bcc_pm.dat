@@ -1,0 +1,10 @@
+KFCD      MSGL..=  0                               14.3.2023
+JOBNAM...=d_0_bcc_pm
+STRNAM...=lat_bcc
+DIR001=../../kstr/lat_bcc/smx/
+DIR002=../../kgrn/0_test/chd/
+DIR003=../../shape/lat_bcc/shp/
+DIR004=../../bmdl/lat_bcc/mdl/
+DIR006=prn/
+Lmaxs.= 30 NTH..= 41 NFI..= 81 FPOT..= N
+OVCOR.=  Y UBG..=  N NPRN.=  0
