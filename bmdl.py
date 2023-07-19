@@ -45,7 +45,7 @@ def FHNDLR(clist):
 	CPU         = ut.css(clist.pop(0))
 	compiler    = ut.css(clist.pop(0))
 	library     = ut.css(clist.pop(0))
-	return timestamp, JOB, EMTO, branch, hash_key, compile_on, OS, CPU, compiler, library
+	return [timestamp, JOB, EMTO, branch, hash_key, compile_on, OS, CPU, compiler, library]
 
 def PRIMV(clist):
 	# check category
@@ -58,7 +58,7 @@ def PRIMV(clist):
 	NQ3 = int(clist.pop(0).split('=')[1])
 	Basis = list(map(lambda x: ut.v3(clist.pop(0)),range(NQ3)))
 	# return info.
-	return A,B,C,ALPHA,BETA,GAMMA,Lattice,Basis
+	return [A,B,C,ALPHA,BETA,GAMMA,Lattice,Basis]
 
 def PRIMKR(clist):
 	# check category
@@ -69,7 +69,7 @@ def PRIMKR(clist):
 	del clist[0:2]
 	reciprocal = list(map(lambda x: ut.v3(clist.pop(0)),range(3)))
 	# return info.
-	return WS_radius, VOL, reciprocal
+	return [WS_radius, VOL, reciprocal]
 
 def SET3D(clist):
 	check_category(clist.pop(0), 'SET3D')
@@ -84,7 +84,7 @@ def BMDL(clist):
 	AMAX,BMAX,ALAMDA = tokenizer(clist.pop(0))
 	RMAX,GMAX = tokenizer(clist.pop(0))
 	# return info.
-	return NPRN,NL,NQ,NLM,NLMQ,MSGL,AMAX,BMAX,ALAMDA,RMAX,GMAX
+	return [NPRN,NL,NQ,NLM,NLMQ,MSGL,AMAX,BMAX,ALAMDA,RMAX,GMAX]
 
 def LATT3M(clist):
 	# check category
@@ -94,7 +94,7 @@ def LATT3M(clist):
 	GA = tokenizer(clist.pop(0))
 	NUMR, NUMG, NUMVR, NUMVG = tokenizer(clist.pop(0))
 	# return info.
-	return R1, RA, G1, GA, NUMR, NUMG, NUMVR, NUMVG
+	return [R1, RA, G1, GA, NUMR, NUMG, NUMVR, NUMVG]
 
 def BMDL2(clist):
 	# check category
@@ -102,6 +102,6 @@ def BMDL2(clist):
 	# read info.
 	CMDL = tokenizer(str0)
 	# return info.
-	return CMDL
+	return [CMDL]
 
 
