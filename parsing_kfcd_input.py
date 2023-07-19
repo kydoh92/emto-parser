@@ -15,15 +15,18 @@ with open(filename,'r') as f:
 # cleaning & get list type
 clines = ut.Cleaning(lines)
 
-MSGL = tokenizer(clines.pop(0), even=0)[1]
+MSGL = int(tokenizer(clines.pop(0), even=0)[1])
 
 JOBNAM = tokenizer(clines.pop(0))[0]
 STRNAM = tokenizer(clines.pop(0))[0]
 
 del clines[0:5]
  
-Lmaxs, NTH, NFI, FPOT = tokenizer(clines.pop(0))
+Lmaxs, NTH, NFI, FPOT = list(map(int, tokenizer(clines.pop(0))))
+FPOT = str(FPOT)
+
 OVCOR, UBG, NPRN = tokenizer(clines.pop(0))
+NPRN = int(NPRN)
 
 # Combine entities
 Input = {
@@ -32,14 +35,14 @@ Input = {
         'STRNAM'  : [STRNAM ,'str']
 	},
 	'Approximation' : {
-        'MSGL'    : [MSGL   ,'int'],
+        'MSGL'    : [MSGL   ,'int_bool'],
         'Lmaxs'   : [Lmaxs  ,'int'],
         'NTH'     : [NTH    ,'int'],
         'NFI'     : [NFI    ,'int'],
-        'FPOT'    : [FPOT   ,'int'],
-        'OVCOR'   : [OVCOR  ,'int'],
-        'UBG'     : [UBG    ,'int'],
-        'NPRN'    : [NPRN   ,'int']
+        'FPOT'    : [FPOT   ,'str_bool'],
+        'OVCOR'   : [OVCOR  ,'str_bool'],
+        'UBG'     : [UBG    ,'str_bool'],
+        'NPRN'    : [NPRN   ,'int_bool']
     }
 }
 
