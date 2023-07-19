@@ -1,0 +1,14 @@
+BMDL      HP......=N                               06 May 20
+JOBNAM...=L21        MSGL.=  1 NPRN.=  0
+DIR001=mdl/
+DIR006=prn/
+Madelung potential for bcc bulk
+NL.....= 7
+LAMDA....=      2.50 AMAX....=      4.50 BMAX....=      4.50
+NQ....=  4 LAT...= 2 IPRIM.= 1 NQR2..= 0
+A........=     1.000 B.......=     1.000 C.......=     1.000
+ALFA.....=      90.0 BETA....=      90.0 GAMMA...=      90.0
+QX(X)....=      0.25 QY(X)...=      0.25 QZ(X)...=      0.25
+QX(X)....=      0.75 QY(X)...=      0.75 QZ(X)...=      0.75
+QX(Y)....=       0.0 QY(Y)...=       0.0 QZ(Y)...=       0.0
+QX(Z)....=       0.5 QY(Z)...=       0.5 QZ(Z)...=       0.5

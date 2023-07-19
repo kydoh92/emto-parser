@@ -1,99 +1,37 @@
 #!/usr/local/anaconda3/bin/python
 import sys
-import utils as ut
-from utils import flush
+#import utils as ut
+from bmdl import DAT
 import json
-
-def L2(f):
-	string = f.readline()
-	JOBNAM = string[10:20].strip()
-	MSGL =  int(string[27:30])
-	NPRN =  int(string[37:40])
-	return JOBNAM, MSGL, NPRN
-
-def L7(f):
-	string = f.readline()
-	NQ =    int(string[ 7:10])
-	LAT =   int(string[18:20])
-	IPRIM = int(string[28:30])
-	NQR2 =  int(string[38:40])
-	return NQ, LAT, IPRIM, NQR2
-
-def L9(f, IPRIM, A, B, C):
-	if IPRIM == 1:
-		ALPHA, BETA, GAMMA = ut.e3f(f)
-		# convert unit degree to radian
-		alpha,beta,gamma = map(ut.DtoR, [ALPHA,BETA,GAMMA])
-		# convert angles to lattice vectors
-		Lattice =  ut.AtoV(A, B, C, alpha, beta, gamma)
-	elif IPRIM == 0:
-		Lattice = list(map(lambda x: ut.e3f(f),range(3)))
-		# convert lattice vectors to angles
-		alpha, beta, gamma = ut.VtoA(Lattice)
-		# convert unit radian to degree
-		ALPHA,BETA,GAMMA = map(ut.RtoD, [alpha,beta,gamma])
-	return Lattice, ALPHA, BETA, GAMMA 
-
-def L10(f, NQ):
-	Basis = list(map(lambda x: list(ut.e3f(f)),range(NQ)))
-	return Basis
-
 #### MAIN ####
 
-# Read and parse a text
+# read a file
 filename=sys.argv[1]
-f = open(filename,'r')
+with open(filename,'r') as f:
+	lines = f.readlines()
+'''
+# convert a file to a compact list
+clist = ut.Cleaning(lines)
+'''
+# extract info.
+DAT_values = DAT(lines)
 
-flush(f)
-JOBNAM, MSGL, NPRN = L2(f)
-#print(JOBNAM, MSGL, NPRN)
-flush(f,3)
-NL = ut.e1i(f) 
-#print(NL)
-LAMDA, AMAX, BMAX = ut.e3f(f)
-#print(LAMDA, AMAX, BMAX)
-NQ, LAT, IPRIM, NQR2 = L7(f)
-#print(NQ, LAT, IPRIM, NQR2)
-A, B, C = ut.e3f(f)
-#print(A, B, C)
-Lattice, ALPHA, BETA, GAMMA = L9(f,IPRIM, A, B, C)
-#print(Lattice, ALPHA, BETA, GAMMA)
-Basis = L10(f,NQ)
-#print(Basis)
+# define names and units of info.
+DAT_keys = ['JOBNAM','MSGL','NPRN','dir_mdl','dir_prn','NL','LAMDA','AMAX','BMAX','NQ','LAT','IPRIM','NQR2','Lattice','Basis']
+DAT_units= [None,None,None,None,None,None,None,None,None,None,None,None,None,None,None]
 
-f.close()
+# add unit to info.
+DAT_vu = [[value,unit] for value, unit in zip(DAT_values,DAT_units)]
 
-# Combine entities
-Input = {
-	'Meta' : {
-		'JOBNAM'  : [JOBNAM ,None],
-		'MSGL'    : [MSGL   ,None],
-		'NPRN'    : [NPRN   ,None]
-	},
-	'Approximation' : {
-		'NL'      : [NL     ,None],
-		'LAMDA'   : [LAMDA  ,None],
-		'AMAX'    : [AMAX   ,None],
-		'BMAX'    : [BMAX   ,None]
-	},
-	'Structure' : {
-		'NQ'      : [NQ     ,None],
-		'LAT'     : [LAT    ,None],
-		'IPRIM'   : [IPRIM  ,None],
-		'NQR2'    : [NQR2   ,None],
-		'A'       : [A      ,None],
-		'B'       : [B      ,None],
-		'C'       : [C      ,None],
-		'ALPHA'   : [ALPHA  ,None],
-		'BETA'    : [BETA   ,None],
-		'GAMMA'   : [GAMMA  ,None],
-		'Lattice' : [Lattice,None],
-		'Basis'   : [Basis  ,None]
-	}
-}
-#print(Input)
+# add name to info. and divide info. into sub-classes
+Meta_dict          = { key:value for key, value in zip(DAT_keys[0:3],DAT_vu[0:3]) }
+Approximation_dict = { key:value for key, value in zip(DAT_keys[3:7],DAT_vu[3:7]) }
+Structure_dict     = { key:value for key, value in zip(DAT_keys[7: ],DAT_vu[7: ]) }
+
+# combine all
+DAT_dict = { 'Meta':Meta_dict, 'Approximation':Approximation_dict, 'Structure':Structure_dict }
+
 # Save as a json file
 with open(JOBNAM+'_in.json', 'w') as f:
-	json.dump(Input, f, indent=2)
-
+	json.dump(DAT_dict, f, indent=2)
 

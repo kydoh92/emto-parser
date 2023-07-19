@@ -1,132 +1,32 @@
 #!/usr/local/anaconda3/bin/python
 import sys
-import numpy as np
 import utils as ut
-from utils import flush
+from bmdl import FHNDLR, PRIMV, PRIMKR, SET3D, BMDL, LATT3M, BMDL2
 import json
 
-def FHNDLR1(f):
-	# read time
-	timestamp = ut.head_timestamp(f)
-	# flush 1 line
-	flush(f)
-	return timestamp
+# read a file
+filename = sys.argv[1]
+with open(filename,'r') as f:
+    lines = f.readlines()
+# convert file to compact list
+clist = ut.Cleaning(lines)
 
-def FHNDLR2(f):
-	# read JOB
-	JOB = ut.css(f)
-	# flush 3 lines
-	flush(f,3)
-	return JOB
+#with open('clean_'+filename,'w') as f:
+#    f.write(''.join(clines))
 
-def FHNDLR3(f):
-	# read information
-	EMTO        = ut.css(f)
-	branch      = ut.css(f)
-	hash_key    = ut.css(f)
-	compile_on  = ut.css(f)
-	OS          = ut.css(f)
-	CPU         = ut.css(f)
-	compiler    = ut.css(f)
-	library     = ut.css(f)
-	# flush a line
-	flush(f)
-	return EMTO, branch, hash_key, compile_on, OS, CPU, compiler, library
-
-def PRIMV(f):
-	# flush 2 lines
-	flush(f,2)
-	# read lengthes and angles
-	A,B,C = ut.e3f(f)
-	ALPHA,BETA,GAMMA = ut.e3f(f)
-	# flush 4 lines
-	flush(f,4)
-	# read lattice vectors
-	Lattice = list(map(lambda x: ut.v3(f),range(3)))
-	# flush a line
-	flush(f)
-	# read NQ3
-	temp = f.readline().split('=')
-	NQ3 = int(temp[1])
-	# flush a line
-	flush(f)
-	# read Basis for NQ3 times
-	Basis = list(map(lambda x: ut.v3(f),range(NQ3)))
-	# flush 2 lines
-	flush(f,2)
-	return A,B,C,ALPHA,BETA,GAMMA,Lattice,Basis
-
-def PRIMKR(f):
-	# read WS_radius and VOL
-	temp = f.readline().split(':')[2].split('=')
-	WS_radius, VOL = map(lambda x : float(x[:10]),temp)
-	# flush 5 lines
-	flush(f,5)
-	# read reciprocal lattice
-	reciprocal = list(map(lambda x: ut.v3(f),range(3)))
-	# flush a line
-	flush(f)
-	return WS_radius, VOL, reciprocal
-
-def BMDL(f):
-	NPRN = ut.e1i(f)
-	NL,NQ,NLM,NLMQ = ut.e4i(f)
-	MSGL = ut.e1i(f)
-	flush(f)
-	AMAX,BMAX,ALAMDA = ut.e3f(f)
-	RMAX,GMAX = ut.e2f(f)
-	flush(f)
-	return NPRN,NL,NQ,NLM,NLMQ,MSGL,AMAX,BMAX,ALAMDA,RMAX,GMAX
-
-def LATT3D(f):
-	R1, RA, G1 = ut.e3f(f)
-	GA = ut.e1f(f)
-	flush(f)
-	NUMR, NUMG, NUMVR, NUMVG = ut.e4i(f)
-	flush(f)
-	return R1, RA, G1, GA, NUMR, NUMG, NUMVR, NUMVG
-
-#### MAIN ####
-
-# Read and parse a text
-filename=sys.argv[1]
-f = open(filename,'r')
-
-#FHNDLR
-time_start = FHNDLR1(f) # There isn't a timestamp for the end
-JOB = FHNDLR2(f)
-EMTO, branch, hash_key, compile_on, OS, CPU, compiler, library = FHNDLR3(f)
-print(time_start,JOB, EMTO, branch, hash_key, compile_on, OS, CPU, compiler, library) # time_start and 9 entities
-
-#PRIMV
-A,B,C,ALPHA,BETA,GAMMA,Lattice,Basis = PRIMV(f)
-print(A,B,C,ALPHA,BETA,GAMMA,Lattice,Basis) # 8 entities
-
-#PRIMKR
-WS_radius, VOL, reciprocal = PRIMKR(f)
-print(WS_radius, VOL, reciprocal) # 3 entities
-
-#SET3D
-flush(f,2)
-
-#BMDL
-NPRN, NL, NQ, NLM, NLMQ, MSGL, AMAX, BMAX, ALAMDA, RMAX, GMAX = BMDL(f)
-print(NPRN, NL, NQ, NLM, NLMQ, MSGL, AMAX, BMAX, ALAMDA, RMAX, GMAX) # 11 entities
-
-#LATT3M
-R1, RA, G1, GA, NUMR, NUMG, NUMVR, NUMVG = LATT3D(f)
-print(R1, RA, G1, GA, NUMR, NUMG, NUMVR, NUMVG) # 8 entities
-
-#END
-CMDL = ut.e1f(f)
-print("CMDL: {}",CMDL) # 1 entity
-
-f.close()
-
+# extract info.
+time, JOB, EMTO, branch, hash_key, compile_on, OS, CPU, compiler, library = FHNDLR(clist)
+A,B,C,ALPHA,BETA,GAMMA,Lattice,Basis = PRIMV(clist)
+WS_radius, VOL, reciprocal = PRIMKR(clist)
+SET3D(clist)
+NPRN, NL, NQ, NLM, NLMQ, MSGL, AMAX, BMAX, ALAMDA, RMAX, GMAX = BMDL(clist)
+R1, RA, G1, GA, NUMR, NUMG, NUMVR, NUMVG = LATT3M(clist)
+CMDL = BMDL2(clist)
 
 # Combine entities
 Entities = {
 	'FHNDLR' : {
+		'time'    : [time    ,'sec'],
 		'JOB'     : [JOB     ,None],
 		'EMTO'    : [EMTO    ,None],
 		'branch'  : [branch  ,None],
