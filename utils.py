@@ -66,8 +66,10 @@ def namestr(obj, namespace):
 	print(get_name)
 	return get_name[0]
 
-def Cleaning(list_data):
+def Cleaning(list_data, opt='default'):
 	list_clean = []
+	if opt == 'kfcd':
+		list_comp = []
 	for line in list_data:
 		stripline = line.strip()
 		if line.lstrip() == '':
@@ -86,7 +88,12 @@ def Cleaning(list_data):
 			pass
 		else:
 			list_clean.append(line)
-	return list_clean
+		if opt == 'kfcd' and 'ASA total energy' in line:
+			list_comp.append(line)
+	if opt == 'default':
+		return list_clean
+	else:
+		return list_clean, list_comp
 
 ### special functions ###
 
