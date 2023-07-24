@@ -1,13 +1,13 @@
 #!/usr/local/anaconda3/bin/python
 import sys
+import re
 import numpy as np
 from numpy import sin, cos, sqrt
 from time import strptime, mktime
 from math import pi, acos
-import re
+#test
 
 ### general functions ###
-
 def tokenizer(string, even=1, spl='='):
     tmp = string.replace(spl,' ').replace('\n','').strip()
     token = re.sub(' +', ' ', tmp).split(' ')
@@ -15,6 +15,19 @@ def tokenizer(string, even=1, spl='='):
         return token[1::2]
     if even == 0:
         return token
+
+def check_category(string, keywd):
+	key = string[0:11].strip().split(':')[0]
+	if key != keywd:
+		print(" ### Error : keyword mismatch; keyword = "+keywd+", input = "+key+"\n"); sys.exit()
+	return string[11:]
+
+def check_dat(string, keywd):
+	key = string[0:5].strip()
+	if key != keywd:
+		print(" ### Error : keyword mismatch; keyword = "+keywd+", input = "+key+"\n"); sys.exit()
+	return string[5:]
+
 '''
 def flush(f,N=1):
 	for i in range(N):
