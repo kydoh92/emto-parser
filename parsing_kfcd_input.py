@@ -15,15 +15,15 @@ with open(filename,'r') as f:
 # cleaning & get list type
 clines = ut.Cleaning(lines)
 
-MSGL = int(tokenizer(clines.pop(0), even=0)[1])
+MSGL = int(tokenizer(clines.pop(0), even=0)[2])
 
 JOBNAM = tokenizer(clines.pop(0))[0]
 STRNAM = tokenizer(clines.pop(0))[0]
 
 del clines[0:5]
  
-Lmaxs, NTH, NFI, FPOT = list(map(int, tokenizer(clines.pop(0))))
-FPOT = str(FPOT)
+Lmaxs, NTH, NFI, FPOT = tokenizer(clines.pop(0))
+Lmaxs, NTH, NFI = list(map(int, [Lmaxs, NTH, NFI]))
 
 OVCOR, UBG, NPRN = tokenizer(clines.pop(0))
 NPRN = int(NPRN)
