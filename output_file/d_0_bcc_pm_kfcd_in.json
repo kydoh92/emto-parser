@@ -11,36 +11,36 @@
   },
   "Approximation": {
     "MSGL": [
-      "MSGL..",
-      "int"
+      0,
+      "int_bool"
     ],
     "Lmaxs": [
-      "30",
+      30,
       "int"
     ],
     "NTH": [
-      "41",
+      41,
       "int"
     ],
     "NFI": [
-      "81",
+      81,
       "int"
     ],
     "FPOT": [
       "N",
-      "int"
+      "str_bool"
     ],
     "OVCOR": [
       "Y",
-      "int"
+      "str_bool"
     ],
     "UBG": [
       "N",
-      "int"
+      "str_bool"
     ],
     "NPRN": [
-      "0",
-      "int"
+      0,
+      "int_bool"
     ]
   }
 }
