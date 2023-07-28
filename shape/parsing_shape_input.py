@@ -1,58 +1,37 @@
 #!/home/tjsrb2507/anaconda3/envs/pyemto/bin/python
 import sys
-import numpy as np
 import utils as ut
-from utils import flush
 import json
-
-def L2(f):
-    string = f.readline()
-    JOBNAM = string[10:20].strip()
-    MSGL =  int(string[27:30])
-    return JOBNAM, MSGL
-def L3(f):
-    string = f.readline()
-    FOR001 = string[7:].strip()
-    return FOR001
-def L6(f):
-    string = f.readline()
-    Lmax = int(string[7:11])
-    NSR = int(string[17:21])
-    NFI = int(string[27:30])
-    return Lmax, NSR, NFI
-def L7(f):
-    string = f.readline()
-    NPRN = int(string[7:11])
-    IVEF = int(string[17:21])
-    return NPRN, IVEF
+import re
+import os
+from shape import DAT
     
-
+# Read the file and parse a text
 filename="lat_bcc.dat"
 with open(filename) as f:
-    flush(f)
-    JOBNAM, MSGL = L2(f)
-    # print(JOBNAM, MSGL)
-    FOR001 = L3(f)
-    # print(FOR001)
-    flush(f,2)
-    Lmax, NSR, NFI = L6(f)
-    NPRN, IVEF = L7(f)
-    # print(Lmax, NSR, NFI, NPRN, IVEF)
-    
-# Combine entities
-Input = {
-    'Meta':{
-        'JOBNAM': [JOBNAM, None],
-        'MSGL': [MSGL, None],
-        'FOR001': [FOR001, None],
-        'NPRN': [NPRN, None],
-    },
-    'Approximation':{
-        'Lmax': [Lmax, None],
-        'NSR': [NSR, None],
-        'NFI': [NFI, None],
-        'IVEF': [IVEF, None]
-    }
-}
-    
+    lines = f.readlines()
 
+# cleaning & get list type [line, line, ...]
+clist = ut.Cleaning(lines)
+
+# extract info.
+DAT_values = DAT(clist)
+print(DAT_values)
+
+# define names and units of info.
+DAT_keys = ['JOBNAME', 'MSGL', 'FOR001', 'NPRN', 'Lmax', 'NSR', 'NFI', 'IVEF']
+DAT_units = [None, None, None, None, None, None, None, None]
+
+# add unit ot info.
+DAT_vu = [[value, unit] for value, unit in zip(DAT_values, DAT_units)]
+
+# add name to info. and divide info. into sub-classes
+Meta_dict = {key:value for key, value in zip(DAT_keys[0:4], DAT_vu[0:4])}
+Approximation_dict = {key:value for key, value in zip(DAT_keys[4:], DAT_vu[4:])}
+
+# combine all
+DAT_dict = {'Meta':Meta_dict, 'Approximation':Approximation_dict}
+
+# save as json file
+with open(filename+'_in.json', 'w') as f:
+    json.dump(DAT_dict, f, indent=2)

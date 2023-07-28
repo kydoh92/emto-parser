@@ -1,67 +1,107 @@
 #!/usr/local/anaconda3/bin/python
 import sys
-import numpy as np
 import re
+import numpy as np
 from numpy import sin, cos, sqrt
 from time import strptime, mktime
 from math import pi, acos
+#test
 
 ### general functions ###
+def tokenizer(string, even=1, spl='='):
+    tmp = string.replace(spl,' ').replace('\n','').strip()
+    token = re.sub(' +', ' ', tmp).split(' ')
+    if even == 1:
+        return token[1::2]
+    if even == 0:
+        return token
 
+def check_category(string, keywd):
+	key = string[0:11].strip().split(':')[0]
+	if key != keywd:
+		print(" ### Error : keyword mismatch; keyword = "+keywd+", input = "+key+"\n"); sys.exit()
+	return string[11:]
+
+def check_dat(string, keywd):
+	key = string[0:5].strip()
+	if key != keywd:
+		print(" ### Error : keyword mismatch; keyword = "+keywd+", input = "+key+"\n"); sys.exit()
+	return string[5:]
+
+'''
 def flush(f,N=1):
 	for i in range(N):
 		f.readline()
-
-def equalfloat(f,N=3,s=10):
-	token = f.readline().split('=')[1:N+1]
+'''
+def equalfloat(string,N=3,s=10):
+	token = string.split('=')[1:N+1]
 	if N == 1:
 		return float(token[0][:s])
-	return list(map(lambda x:float(x[:s]),token))
+	return map(lambda x:float(x[:s]),token)
 
-def equalint(f,N=4,s=3):
-	token = f.readline().split('=')[1:N+1]
+def equalint(string,N=4,s=3):
+	token = string.split('=')[1:N+1]
 	if N == 1:
 		return int(token[0][:s])
-	return list(map(lambda x:int(x[:s]),token))
+	return map(lambda x:int(x[:s]),token)
 
-def bracomfloat(f,N=3,s=10):
-	token = f.readline().lstrip().lstrip('(').split(',')[:N]
+def equalmix(string):
+	return map(lambda x: x.split()[0],map(lambda x: x.strip(),string.split('=')[1:]))
+
+def bracomfloat(string,N=3,s=10):
+	token = string.lstrip().lstrip('(').split(',')[:N]
 	if N == 1:
 		return list(float(token[0][:s]))
 	return list(map(lambda x:float(x[:s]),token))
 
-def colonspacestring(f):
-	token = f.readline().split(': ')
+def colonspacestring(string):
+	token = string.split(': ')
 	return token[1].strip()
 
-def getint(f, token=None):
-    if token is None:
-        token = f.readline()
-    int_list = [int(s) for s in re.findall(r"[-+]?\d*\.\d+|\d+", token)]
-    return int_list
+def namestr(obj, namespace):
+	print('something')
+	print(obj)
+	print(namespace)
+	get_name=[name for name in namespace if namespace[name] is obj]
+	print(get_name)
+	return get_name[0]
 
-def getfloat(f, token=None):
-    if token is None:
-        token = f.readline()
-    float_list = [float(s) for s in re.findall(r"[-+]?\d*\.\d+|\d+", token)]
-    return float_list
+def Cleaning(list_data):
+	list_clean = []
+	for line in list_data:
+		stripline = line.strip()
+		if line.lstrip() == '':
+			pass
+		elif 'Hard test' in line:
+			pass
+		elif 'WARNING: ' in line:
+			pass
+		elif 'Atomic ch' in line:
+			pass
+		elif 'Potential' in line:
+			pass
+		elif 'Linear lo' in line:
+			pass
+		else:
+			list_clean.append(line)
+	return list_clean
 
-def getstring_withoutequal(f, token=None):
-    if token is None:
-        token = f.readline()
-    str_list = [s for s in token.split() if not re.match(r"[-+]?\d*\.\d+|\d+", s)]
-    str_list_2 = [s for s in str_list if s != '=' and s != ':']
-    str_list_3 = [s.replace('=','') for s in str_list_2]
-    return str_list_3
-	
 ### special functions ###
 
-def head_timestamp(f):
+def lat_headtime(string0,string1):
 	# read time
-	s_HM = f.readline()[74:].rstrip()
-	s_dby = f.readline()[70:].rstrip()
+	s_HM = string0[74:].rstrip()
+	s_dby = string1[70:].rstrip()
 	# convert string to time object
 	time_object = strptime(s_HM+s_dby, "%H:%M%d-%b-%y")
+	timestamp = mktime(time_object)
+	return timestamp
+
+def kgrn_headtime(string):
+	# read time
+	s_HM_dby = string[61:].rstrip()
+	# convert string to time object
+	time_object = strptime(s_HM_dby, "%H:%M / %d-%b-%y")
 	timestamp = mktime(time_object)
 	return timestamp
 
@@ -103,6 +143,9 @@ def round0(v):
     return round(v,10)
 
 ### alias ###
+
+def em(f):
+	return equalmix(f)
 
 def e3f(f,s=10):
 	return equalfloat(f,3,s)

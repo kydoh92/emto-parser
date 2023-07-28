@@ -1,0 +1,38 @@
+{
+  "Meta": {
+    "JOBNAME": [
+      "lat_bcc",
+      null
+    ],
+    "MSGL": [
+      1,
+      null
+    ],
+    "FOR001": [
+      "../../kstr/lat_bcc/smx/lat_bcc.tfh",
+      null
+    ],
+    "NPRN": [
+      0,
+      null
+    ]
+  },
+  "Approximation": {
+    "Lmax": [
+      30,
+      null
+    ],
+    "NSR": [
+      129,
+      null
+    ],
+    "NFI": [
+      11,
+      null
+    ],
+    "IVEF": [
+      3,
+      null
+    ]
+  }
+}
