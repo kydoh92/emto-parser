@@ -66,6 +66,20 @@ def namestr(obj, namespace):
 	print(get_name)
 	return get_name[0]
 
+def getint(string): # for parsing shape output files
+    int_list = [int(s) for s in re.findall(r"[-+]?\d*\.\d+|\d+", string)]
+    return int_list
+
+def getfloat(string): # for parsing shape output files
+    float_list = [float(s) for s in re.findall(r"[-+]?\d*\.\d+|\d+", string)]
+    return float_list
+
+def getstring_withoutequal(string): # for parsing shape output files
+    str_list = [s for s in string.split() if not re.match(r"[-+]?\d*\.\d+|\d+", s)]
+    str_list_2 = [s for s in str_list if s != '=' and s != ':']
+    str_list_3 = [s.replace('=','') for s in str_list_2]
+    return str_list_3
+
 def Cleaning(list_data):
 	list_clean = []
 	for line in list_data:
