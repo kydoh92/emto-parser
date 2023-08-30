@@ -56,6 +56,7 @@ for i,_ in enumerate(categories):
 # combine all
 bmdl_dict = { key:value for key, value in zip(categories,name_value_unit) }
 
+JOB = bmdl_dict['FHNDLR']['JOB'][0]
 # Save as a json file
 with open(JOB+'_out.json', 'w') as f:
 	json.dump(bmdl_dict, f, indent=2)
