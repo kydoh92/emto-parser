@@ -17,7 +17,7 @@ def tokenizer(string, even=1, spl='='):
         return token
 
 def tokenizer2(string, even=1, spl1='=', spl2=' '):
-    tmp = string.replace(spl,spl2).replace('\n','').strip()
+    tmp = string.replace(spl1,spl2).replace('\n','').strip()
     token = re.sub(' +', ' ', tmp).split(' ')
     if even == 1:
         return token[1::2]

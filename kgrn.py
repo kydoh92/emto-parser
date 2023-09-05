@@ -5,7 +5,7 @@ from utils import tokenizer, tokenizer2, check_category, check_dat
 def MLTPM1(clist, spin, nq):   #Multipole
 	del(clist[0:3])
 	list_mltpm = list()
-	if spin = 1:
+	if spin is 1:
 		for iq in range(nq):
 			list_mltpm.append(tokenizer2(clist.pop(0), even=0, spl1='-', spl2=' -'))
 			list_mltpm[iq].insert(2, 0.0) # add Spin 0
