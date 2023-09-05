@@ -16,9 +16,9 @@ def MLTPM1(clist, spin, nq):   #Multipole
 	return [list_mltpm, Tot]
 
 def MLTPM2(clist):    #Non vanishing
-	while True:
+	del(clist[0])
+	while category_cognition(clist[0]) is 0:
 		del(clist[0])
-		break category_cognition(clist[0])
 
 def DAT(clist):
 	# check file
