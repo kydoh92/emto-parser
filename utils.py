@@ -24,6 +24,15 @@ def tokenizer2(string, even=1, spl1='=', spl2=' '):
     if even == 0:
         return token
 
+def category_cognition(string):
+	tmp = string[:11].strip()
+	if tmp is '':
+		return 0
+	token = re.sub(' +', ' ', tmp).split(' ')
+	if token[0][-1] is ':':
+		return 1
+	else:
+		return 0
 
 def check_category(string, keywd):
 	key = string[0:11].strip().split(':')[0]
