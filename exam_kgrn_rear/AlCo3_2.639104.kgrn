@@ -1,0 +1,88 @@
+KGRN                                              13.2.2023
+JOBNAM=AlCo3_2.639104
+STRT..=  A MSGL.=  1 EXPAN.= S FCD..=  Y FUNC..= SCA CQNA=N
+FOR001=/home/kydoh/2_Research/emtodata/6_D019/lat/kstr/D019.tfh
+FOR001=/home/kydoh/2_Research/emtodata/6_D019/lat/kstr/D019M.tfh
+DIR002=kgrn/
+DIR003=kgrn/
+FOR004=/home/kydoh/2_Research/emtodata/6_D019/lat/bmdl/D019.mdl
+DIR006=kgrn/
+DIR009=kgrn/
+DIR010=kgrn/
+DIR011=kgrn/tmp/
+Self-consistent KKR Calc for AlCo3_2.639104.
+Band: 10 lines
+NITER.=300 NLIN.= 31 NPRN.=  0 NCPA.=  1 NT...=  8 MNTA.=  1
+MODE..= 3D FRC..=  N DOS..=  N OPS..=  N AFM..=  F CRT..=  M
+Lmaxh.=  8 Lmaxt=  4 NFI..= 31 FIXG.=  2 SHF..=  0 SOFC.=  Y
+KMSH...= G IBZ..=  4 NKX..=  0 NKY..= 11 NKZ..=  7 FBZ..=  N
+KMSH2..= G IBZ2.=  1 NKX2.=  4 NKY2.=  0 NKZ2.= 51 NCPU.=001
+ZMSH...= C NZ1..= 16 NZ2..= 16 NZ3..=  8 NRES.=  4 NZD.=1500
+DEPTH..=  0.940 IMAGZ.=  0.020 EPS...=  0.200 ELIM..= -1.000
+AMIX...=  0.010 EFMIX.=  0.900 VMTZ..=  0.000 MMOM..=  0.000
+TOLE...=1.0e-08 TOLEF.=1.0e-07 TOLCPA=1.0e-06 TFERMI=  500.0
+SWS......= 2.6391035 NSWS.=  1 DSWS..=   0.05 ALPCPA= 0.6020
+Setup: 2 + NQ*NS lines
+EFGS...=  0.000 HX....=  0.100 NX...=  5 NZ0..=  6 STMP..= N
+Symb   IQ IT ITA NZ  CONC   Sm(s)  S(ws) WS(wst) QTR SPLT Fix
+Al      1  1  1  13  1.000  1.000  1.000  1.000  0.0 1.00  N
+Co      2  2  1  27  1.000  1.000  1.000  1.000  0.0 1.00  N
+Co      3  3  1  27  1.000  1.000  1.000  1.000  0.0 1.00  N
+Co      4  4  1  27  1.000  1.000  1.000  1.000  0.0 1.00  N
+Co      5  5  1  27  1.000  1.000  1.000  1.000  0.0 1.00  N
+Co      6  6  1  27  1.000  1.000  1.000  1.000  0.0 1.00  N
+Co      7  7  1  27  1.000  1.000  1.000  1.000  0.0 1.00  N
+Al      8  8  1  13  1.000  1.000  1.000  1.000  0.0 1.00  N
+Atom:  4 lines + NT*6 lines
+IEX...=  7 NP..=1001 NES..= 50 NITER=500 IWAT.=  0 NPRNA=  0
+VMIX.....=  0.300000 RWAT....=  3.500000 RMAX....= 20.000000
+DX.......=  0.030000 DR1.....=  0.002000 TEST....=  1.00e-12
+TESTE....=  1.00e-12 TESTY...=  1.00e-12 TESTV...=  1.00e-12
+Al
+Iz=  13 Norb=  6 Ion=  0 Config= 3s2_3p1
+n      1  2  2  2  3  3
+Kappa -1 -1  1 -2 -1  1
+Occup  2  2  2  4  2  1
+Valen  0  0  0  0  1  1
+Co
+Iz=  27 Norb= 10 Ion=  0 Config= 3d7_4s2
+n      1  2  2  2  3  3  3  3  3  4
+Kappa -1 -1  1 -2 -1  1 -2  2 -3 -1
+Occup  2  2  2  4  2  2  4  4  3  2
+Valen  0  0  0  0  0  0  0  1  1  1
+Co
+Iz=  27 Norb= 10 Ion=  0 Config= 3d7_4s2
+n      1  2  2  2  3  3  3  3  3  4
+Kappa -1 -1  1 -2 -1  1 -2  2 -3 -1
+Occup  2  2  2  4  2  2  4  4  3  2
+Valen  0  0  0  0  0  0  0  1  1  1
+Co
+Iz=  27 Norb= 10 Ion=  0 Config= 3d7_4s2
+n      1  2  2  2  3  3  3  3  3  4
+Kappa -1 -1  1 -2 -1  1 -2  2 -3 -1
+Occup  2  2  2  4  2  2  4  4  3  2
+Valen  0  0  0  0  0  0  0  1  1  1
+Co
+Iz=  27 Norb= 10 Ion=  0 Config= 3d7_4s2
+n      1  2  2  2  3  3  3  3  3  4
+Kappa -1 -1  1 -2 -1  1 -2  2 -3 -1
+Occup  2  2  2  4  2  2  4  4  3  2
+Valen  0  0  0  0  0  0  0  1  1  1
+Co
+Iz=  27 Norb= 10 Ion=  0 Config= 3d7_4s2
+n      1  2  2  2  3  3  3  3  3  4
+Kappa -1 -1  1 -2 -1  1 -2  2 -3 -1
+Occup  2  2  2  4  2  2  4  4  3  2
+Valen  0  0  0  0  0  0  0  1  1  1
+Co
+Iz=  27 Norb= 10 Ion=  0 Config= 3d7_4s2
+n      1  2  2  2  3  3  3  3  3  4
+Kappa -1 -1  1 -2 -1  1 -2  2 -3 -1
+Occup  2  2  2  4  2  2  4  4  3  2
+Valen  0  0  0  0  0  0  0  1  1  1
+Al
+Iz=  13 Norb=  6 Ion=  0 Config= 3s2_3p1
+n      1  2  2  2  3  3
+Kappa -1 -1  1 -2 -1  1
+Occup  2  2  2  4  2  1
+Valen  0  0  0  0  1  1
