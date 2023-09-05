@@ -16,6 +16,15 @@ def tokenizer(string, even=1, spl='='):
     if even == 0:
         return token
 
+def tokenizer2(string, even=1, spl1='=', spl2=' '):
+    tmp = string.replace(spl,spl2).replace('\n','').strip()
+    token = re.sub(' +', ' ', tmp).split(' ')
+    if even == 1:
+        return token[1::2]
+    if even == 0:
+        return token
+
+
 def check_category(string, keywd):
 	key = string[0:11].strip().split(':')[0]
 	if key != keywd:
