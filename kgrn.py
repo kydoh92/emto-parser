@@ -1,6 +1,6 @@
 #!/usr/local/anaconda3/bin/python
 import utils as ut
-from utils import tokenizer, tokenizer2, check_category, check_dat
+from utils import tokenizer, tokenizer2, check_category, check_dat, category_cognition
 
 def MLTPM1(clist, spin, nq):   #Multipole
 	del(clist[0:3])
@@ -8,12 +8,17 @@ def MLTPM1(clist, spin, nq):   #Multipole
 	if spin is 1:
 		for iq in range(nq):
 			list_mltpm.append(tokenizer2(clist.pop(0), even=0, spl1='-', spl2=' -'))
-			list_mltpm[iq].insert(2, 0.0) # add Spin 0
+			list_mltpm[iq].insert(2, '0.0000') # add Spin 0
 	else:
 		for iq in range(nq):
 			list_mltpm.append(tokenizer2(clist.pop(0), even=0, spl1='-', spl2=' -'))
 	Tot = tokenizer(clist.pop(0))
 	return [list_mltpm, Tot]
+
+def MLTPM2(clist):    #Non vanishing
+	while True:
+		del(clist[0])
+		break category_cognition(clist[0])
 
 def DAT(clist):
 	# check file
