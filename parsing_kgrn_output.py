@@ -1,7 +1,7 @@
 #!/usr/local/anaconda3/bin/python
 import sys
 import utils as ut
-from kgrn import MLTPM1, MLTPM2
+from kgrn import MLTPM1, MLTPM2, OPTPOT
 import json
 
 '''
@@ -22,11 +22,16 @@ with open(filepath,'r') as f:
 
 clist = lines
 
+# testing parameters
+ns = 2
+nq = 8
+
 # extract info.
 values = list()
-values.append(MLTPM1(clist,spin=2,nq=8))
-for iq in range(8):
+values.append(MLTPM1(clist,ns,nq))
+for iq in range(nq):
 	MLTPM2(clist)
-
+values.append(OPTPOT(clist,ns))
+print(values)
 print(clist[0])
 print(ut.category_cognition(clist[0]))
