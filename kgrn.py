@@ -26,7 +26,7 @@ def OPTPOT(clist, spin):
 	for x in range(spin):
 		_,_,Fbar,_,g,_,VolI = tokenizer2(clist.pop(0),even=0)
 		optpot.append([Fbar,g,VolI])
-	# parse VMTZ
+	# parse VMTZ up and down
 	_,up,dn = tokenizer2(clist.pop(0), even=0)
 	VMTZ = [up,dn]
 	# delete Local muffin-tin zero for IT
