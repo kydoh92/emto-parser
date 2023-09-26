@@ -20,6 +20,20 @@ def MLTPM2(clist):    #Non vanishing
 	while category_cognition(clist[0]) is 0:
 		del(clist[0])
 
+def OPTPOT(clist, spin):
+	# parse Fbar, g, VolI for spins
+	optpot = list()
+	for x in range(spin):
+		optpot.append(list(tokenizer2(clist.pop(0))))
+	# parse VMTZ
+	_,up,dn = tokenizer2(clist.pop(0), even=0)
+	VMTZ = list(up,dn)
+	# delete Local muffin-tin zero for IT
+	while category_cognition(clist[0]) is 0:
+		del(clist[0])
+	return [optpot,VMTZ]
+
+
 def DAT(clist):
 	# check file
 	check_dat(clist.pop(0),'BMDL')
