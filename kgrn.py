@@ -34,6 +34,17 @@ def OPTPOT(clist, spin):
 		del(clist[0])
 	return [optpot,VMTZ]
 
+def KGRN1(clist, afm):   #Iteration
+	_,_,_,Iteration,_,_,Etot,_,_,erren = tokenizer2(clist.pop(0), even=0)
+	if afm is not 'P':
+		_,_,_,Magmom = tokenizer2(clist.pop(0), even=0)
+	else:
+		Magmom = 0
+	_,_,Dysonloops,_,_,EF_,_,erref = tokenizer2(clist.popo(0), even=0)
+	return [Iteration,Etot,erren,Magmom,Dysonloops,EF,errenf]
+
+def KGRN2(clist,total_nta):
+	loop = total_nta//6
 
 def DAT(clist):
 	# check file
