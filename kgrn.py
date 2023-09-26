@@ -24,10 +24,11 @@ def OPTPOT(clist, spin):
 	# parse Fbar, g, VolI for spins
 	optpot = list()
 	for x in range(spin):
-		optpot.append(list(tokenizer2(clist.pop(0))))
+		_,_,Fbar,_,g,_,VolI = tokenizer2(clist.pop(0),even=0)
+		optpot.append([Fbar,g,VolI])
 	# parse VMTZ
 	_,up,dn = tokenizer2(clist.pop(0), even=0)
-	VMTZ = list(up,dn)
+	VMTZ = [up,dn]
 	# delete Local muffin-tin zero for IT
 	while category_cognition(clist[0]) is 0:
 		del(clist[0])
