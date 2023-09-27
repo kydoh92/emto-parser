@@ -34,6 +34,33 @@ def category_cognition(string):
 	else:
 		return 0
 
+def category_classify(string):
+	token = tokenizer2(string, even=0)
+	if token[0] == 'KGRN:':
+		if token[1] == 'Iteration':
+			return 'KGRN1'
+		elif token[1] == 'QTR':
+			return 'KGRN2'
+		elif token[1] == 'QSCA':
+			return 'KGRN3'
+		elif token[1] == 'QCPA':
+			return 'KGRN4'
+		else:
+			raise KeyError(f'Something worng! {token[0]} {token[1]}')
+	elif token[0] == 'OPTPOT:':
+		return 'OPTPOT'
+	elif token[0] == 'MLTPM:':
+		if token[1] == 'Multipole':
+			return 'MLTPM1'
+		elif token[1] == 'Non':
+			return 'MLTPM2'
+		else:
+			raise KeyError(f'Something worng! {token[0]} {token[1]}')
+	elif token[0] == 'EBTOP:':
+		return 'EBTOP'
+	else:
+		raise KeyError(f'{token[0]} is Not implemented!')
+
 def check_category(string, keywd):
 	key = string[0:11].strip().split(':')[0]
 	if key != keywd:

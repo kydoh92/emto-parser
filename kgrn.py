@@ -1,6 +1,31 @@
 #!/usr/local/anaconda3/bin/python
 import utils as ut
-from utils import tokenizer, tokenizer2, check_category, check_dat, category_cognition
+from utils import tokenizer, tokenizer2, check_category, check_dat
+from utils import category_cognition, category_classify
+
+def CALL_CATEGORY(clist, nq, afm, ns):
+	while category_cognition(clist[0]) is 0:
+		del(clist[0])
+	target = category_classify(clist[0])
+	#print(target)
+	if target == 'MLTPM1':
+		return target, MLTPM1(clist, ns, nq)
+	elif target == 'MLTPM2':
+		return target, MLTPM2(clist)
+	elif target == 'OPTPOT':
+		return target, OPTPOT(clist, ns)
+	elif target == 'KGRN1':
+		return target, KGRN1(clist, afm)
+	elif target == 'KGRN2':
+		return target, KGRN2(clist)
+	elif target == 'KGRN3':
+		return target, KGRN2(clist)
+	elif target == 'KGRN4':
+		return target, KGRN2(clist)
+	elif target == 'EBTOP':
+		return target, None
+	else:
+		raise KeyError(f'{target} is Not implemented yet!')
 
 def MLTPM1(clist, spin, nq):   #Multipole
 	del(clist[0:3])
@@ -35,16 +60,21 @@ def OPTPOT(clist, spin):
 	return [optpot,VMTZ]
 
 def KGRN1(clist, afm):   #Iteration
-	_,_,_,Iteration,_,_,Etot,_,_,erren = tokenizer2(clist.pop(0), even=0)
+	_,_,_,Iteration,_,Etot,_,erren = tokenizer2(clist.pop(0), even=0)
 	if afm is not 'P':
-		_,_,_,Magmom = tokenizer2(clist.pop(0), even=0)
+		_,_,Magmom = tokenizer2(clist.pop(0), even=0)
 	else:
 		Magmom = 0
-	_,_,Dysonloops,_,_,EF_,_,erref = tokenizer2(clist.popo(0), even=0)
-	return [Iteration,Etot,erren,Magmom,Dysonloops,EF,errenf]
+	_,_,Dysonloops,_,EF,_,erref = tokenizer2(clist.pop(0), even=0)
+	return [Iteration,Etot,erren,Magmom,Dysonloops,EF,erref]
 
-def KGRN2(clist,total_nta):
-	loop = total_nta//6
+def KGRN2(clist): #QTR #QSCA #QCPA
+	category = category_classify(clist[0])
+	qtr = list()
+	qtr.append(tokenizer2(clist.pop(0), even=0)[2:])
+	while category_classify(clist[0]) is category:
+		qtr.append(tokenizer2(clist.pop(0), even=0)[2:])
+	return [qtr]
 
 def DAT(clist):
 	# check file
