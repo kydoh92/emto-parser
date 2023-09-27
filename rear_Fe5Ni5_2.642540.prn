@@ -1,0 +1,1172 @@
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  6.1972 0.0862 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000
+ Tot  6.1972
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.002541
+            25 -0.002147
+            43  0.000201
+            47 -0.000532
+ OPTPOT:   Fbar =  0.000000 g = -0.722134 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.727646 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.684789     -0.702135
+ KGRN:  Iteration no.   1 Etot =    -2811.972130 erren = 1.00000000
+        Magn. mom. =  0.745
+        Dyson loops    32 EF   =        0.011027 erref = 0.11498548
+ KGRN:  QSCA = -0.026740
+ KGRN:  QCPA = -0.118646  0.118646
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 9 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  6 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 9 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0141 0.8759-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000
+ Tot  9.0141
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001526
+            25 -0.001290
+            43  0.000115
+            47 -0.000305
+ OPTPOT:   Fbar =  0.000000 g = -0.747435 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.730316 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.709848     -0.713407
+ KGRN:  Iteration no.   2 Etot =    -2793.596913 erren = 1.00000000
+        Magn. mom. =  1.003
+        Dyson loops    32 EF   =       -0.000420 erref = 0.10404762
+ KGRN:  QSCA = -0.010141
+ KGRN:  QCPA = -0.105135  0.105135
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 8 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  6 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 8 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0141 1.1866-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000
+ Tot  9.0141
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001746
+            25 -0.001476
+            43  0.000109
+            47 -0.000287
+ OPTPOT:   Fbar =  0.000000 g = -0.759918 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.731599 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.749904     -0.727961
+ KGRN:  Iteration no.   3 Etot =    -2793.617771 erren = 0.02085806
+        Magn. mom. =  1.440
+        Dyson loops    32 EF   =       -0.008254 erref = 0.02166697
+ KGRN:  QSCA =  0.002537
+ KGRN:  QCPA = -0.102096  0.102096
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  6 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0094 1.4438 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000-0.0000
+ Tot  9.0094
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001571
+            25 -0.001328
+            43  0.000114
+            47 -0.000301
+ OPTPOT:   Fbar =  0.000000 g = -0.768654 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.732557 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.768654     -0.732557
+ KGRN:  Iteration no.   4 Etot =    -2793.650294 erren = 0.03252298
+        Magn. mom. =  1.503
+        Dyson loops    32 EF   =       -0.013416 erref = 0.00280475
+ KGRN:  QSCA =  0.010401
+ KGRN:  QCPA = -0.099413  0.099413
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  7 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0077 1.5189-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000-0.0000
+ Tot  9.0077
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001509
+            25 -0.001275
+            43  0.000117
+            47 -0.000308
+ OPTPOT:   Fbar =  0.000000 g = -0.773547 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.734687 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.773547     -0.734687
+ KGRN:  Iteration no.   5 Etot =    -2793.653391 erren = 0.00309643
+        Magn. mom. =  1.533
+        Dyson loops    32 EF   =       -0.017244 erref = 0.00339758
+ KGRN:  QSCA =  0.015702
+ KGRN:  QCPA = -0.097637  0.097637
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  7 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 6 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0072 1.5515-0.0000 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+ Tot  9.0072
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001265
+            43  0.000118
+            47 -0.000312
+ OPTPOT:   Fbar =  0.000000 g = -0.776492 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.736799 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.776492     -0.736799
+ KGRN:  Iteration no.   6 Etot =    -2793.655368 erren = 0.00197734
+        Magn. mom. =  1.559
+        Dyson loops    32 EF   =       -0.020097 erref = 0.00292269
+ KGRN:  QSCA =  0.019512
+ KGRN:  QCPA = -0.096416  0.096416
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  8 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 6 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0069 1.5742 0.0000-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000-0.0000
+ Tot  9.0069
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001492
+            25 -0.001261
+            43  0.000119
+            47 -0.000314
+ OPTPOT:   Fbar =  0.000000 g = -0.778513 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.738434 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.778513     -0.738434
+ KGRN:  Iteration no.   7 Etot =    -2793.657104 erren = 0.00173604
+        Magn. mom. =  1.580
+        Dyson loops    32 EF   =       -0.022209 erref = 0.00220156
+ KGRN:  QSCA =  0.022276
+ KGRN:  QCPA = -0.095551  0.095551
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  8 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 7 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0068 1.5917 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000
+ Tot  9.0068
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001491
+            25 -0.001260
+            43  0.000119
+            47 -0.000316
+ OPTPOT:   Fbar =  0.000000 g = -0.779973 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.739631 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.779973     -0.739631
+ KGRN:  Iteration no.   8 Etot =    -2793.658454 erren = 0.00135035
+        Magn. mom. =  1.596
+        Dyson loops    32 EF   =       -0.023758 erref = 0.00159739
+ KGRN:  QSCA =  0.024279
+ KGRN:  QCPA = -0.094928  0.094928
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  7 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0066 1.6054-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000
+ Tot  9.0066
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001491
+            25 -0.001260
+            43  0.000120
+            47 -0.000317
+ OPTPOT:   Fbar =  0.000000 g = -0.781041 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.740503 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.781041     -0.740503
+ KGRN:  Iteration no.   9 Etot =    -2793.659477 erren = 0.00102285
+        Magn. mom. =  1.610
+        Dyson loops    32 EF   =       -0.024891 erref = 0.00117399
+ KGRN:  QSCA =  0.025731
+ KGRN:  QCPA = -0.094493  0.094493
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  7 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 6 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0065 1.6160-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000
+ Tot  9.0065
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001491
+            25 -0.001260
+            43  0.000120
+            47 -0.000318
+ OPTPOT:   Fbar =  0.000000 g = -0.781829 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.741138 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.781829     -0.741138
+ KGRN:  Iteration no.  10 Etot =    -2793.660254 erren = 0.00077625
+        Magn. mom. =  1.619
+        Dyson loops    32 EF   =       -0.025714 erref = 0.00084185
+ KGRN:  QSCA =  0.026782
+ KGRN:  QCPA = -0.094186  0.094186
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  7 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 6 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0064 1.6234-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000
+ Tot  9.0064
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001491
+            25 -0.001260
+            43  0.000121
+            47 -0.000319
+ OPTPOT:   Fbar =  0.000000 g = -0.782410 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.741607 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.782410     -0.741607
+ KGRN:  Iteration no.  11 Etot =    -2793.660804 erren = 0.00055093
+        Magn. mom. =  1.625
+        Dyson loops    32 EF   =       -0.026310 erref = 0.00060483
+ KGRN:  QSCA =  0.027542
+ KGRN:  QCPA = -0.093968  0.093968
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 10 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0064 1.6243 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000-0.0000-0.0000 0.0000
+ Tot  9.0064
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001491
+            25 -0.001260
+            43  0.000121
+            47 -0.000320
+ OPTPOT:   Fbar =  0.000000 g = -0.782820 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742006 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.782820     -0.742006
+ KGRN:  Iteration no.  12 Etot =    -2793.661583 erren = 0.00077880
+        Magn. mom. =  1.617
+        Dyson loops    32 EF   =       -0.026816 erref = 0.00038554
+ KGRN:  QSCA =  0.028085
+ KGRN:  QCPA = -0.093832  0.093832
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  5- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0064 1.6319 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000
+ Tot  9.0064
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001495
+            25 -0.001264
+            43  0.000121
+            47 -0.000320
+ OPTPOT:   Fbar =  0.000000 g = -0.783158 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742193 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783158     -0.742193
+ KGRN:  Iteration no.  13 Etot =    -2793.662007 erren = 0.00042415
+        Magn. mom. =  1.639
+        Dyson loops    32 EF   =       -0.027174 erref = 0.00073689
+ KGRN:  QSCA =  0.028519
+ KGRN:  QCPA = -0.093843  0.093843
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  5- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0063 1.6396-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot  9.0063
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001497
+            25 -0.001265
+            43  0.000121
+            47 -0.000321
+ OPTPOT:   Fbar =  0.000000 g = -0.783437 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742334 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783437     -0.742334
+ KGRN:  Iteration no.  14 Etot =    -2793.662284 erren = 0.00027664
+        Magn. mom. =  1.641
+        Dyson loops    32 EF   =       -0.027404 erref = 0.00000360
+ KGRN:  QSCA =  0.028806
+ KGRN:  QCPA = -0.093747  0.093747
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  5- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0063 1.6406 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000
+ Tot  9.0063
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001497
+            25 -0.001265
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783609 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742481 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783609     -0.742481
+ KGRN:  Iteration no.  15 Etot =    -2793.662160 erren = 0.00012369
+        Magn. mom. =  1.641
+        Dyson loops    32 EF   =       -0.027556 erref = 0.00011808
+ KGRN:  QSCA =  0.029005
+ KGRN:  QCPA = -0.093683  0.093683
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  5- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0063 1.6405 0.0000-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000
+ Tot  9.0063
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001497
+            25 -0.001265
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783718 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742609 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783718     -0.742609
+ KGRN:  Iteration no.  16 Etot =    -2793.662158 erren = 0.00000207
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027658 erref = 0.00010977
+ KGRN:  QSCA =  0.029148
+ KGRN:  QCPA = -0.093628  0.093628
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  5- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0063 1.6403 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000
+ Tot  9.0063
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001265
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783794 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742709 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783794     -0.742709
+ KGRN:  Iteration no.  17 Etot =    -2793.662164 erren = 0.00000535
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027727 erref = 0.00007875
+ KGRN:  QSCA =  0.029253
+ KGRN:  QCPA = -0.093580  0.093580
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0063 1.6402 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000
+ Tot  9.0063
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783848 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742785 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783848     -0.742785
+ KGRN:  Iteration no.  18 Etot =    -2793.662167 erren = 0.00000355
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027776 erref = 0.00005488
+ KGRN:  QSCA =  0.029328
+ KGRN:  QCPA = -0.093542  0.093542
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6402-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783889 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742841 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783889     -0.742841
+ KGRN:  Iteration no.  19 Etot =    -2793.662169 erren = 0.00000138
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027810 erref = 0.00003864
+ KGRN:  QSCA =  0.029383
+ KGRN:  QCPA = -0.093512  0.093512
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6402-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783919 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742883 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783919     -0.742883
+ KGRN:  Iteration no.  20 Etot =    -2793.662169 erren = 0.00000092
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027835 erref = 0.00002778
+ KGRN:  QSCA =  0.029423
+ KGRN:  QCPA = -0.093489  0.093489
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6402-0.0000 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783941 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742914 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783941     -0.742914
+ KGRN:  Iteration no.  21 Etot =    -2793.662170 erren = 0.00000088
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027853 erref = 0.00002016
+ KGRN:  QSCA =  0.029452
+ KGRN:  QCPA = -0.093472  0.093472
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783957 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742937 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783957     -0.742937
+ KGRN:  Iteration no.  22 Etot =    -2793.662171 erren = 0.00000079
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027867 erref = 0.00001472
+ KGRN:  QSCA =  0.029473
+ KGRN:  QCPA = -0.093459  0.093459
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000 0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783969 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742954 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783969     -0.742954
+ KGRN:  Iteration no.  23 Etot =    -2793.662172 erren = 0.00000068
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027876 erref = 0.00001079
+ KGRN:  QSCA =  0.029488
+ KGRN:  QCPA = -0.093449  0.093449
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783978 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742966 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783978     -0.742966
+ KGRN:  Iteration no.  24 Etot =    -2793.662172 erren = 0.00000056
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027884 erref = 0.00000794
+ KGRN:  QSCA =  0.029498
+ KGRN:  QCPA = -0.093442  0.093442
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783985 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742976 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783985     -0.742976
+ KGRN:  Iteration no.  25 Etot =    -2793.662173 erren = 0.00000046
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027889 erref = 0.00000585
+ KGRN:  QSCA =  0.029506
+ KGRN:  QCPA = -0.093437  0.093437
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783990 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742983 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783990     -0.742983
+ KGRN:  Iteration no.  26 Etot =    -2793.662173 erren = 0.00000037
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027893 erref = 0.00000433
+ KGRN:  QSCA =  0.029512
+ KGRN:  QCPA = -0.093433  0.093433
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783994 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742988 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783994     -0.742988
+ KGRN:  Iteration no.  27 Etot =    -2793.662174 erren = 0.00000028
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027896 erref = 0.00000320
+ KGRN:  QSCA =  0.029516
+ KGRN:  QCPA = -0.093430  0.093430
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000 0.0000-0.0000 0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783997 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742992 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783997     -0.742992
+ KGRN:  Iteration no.  28 Etot =    -2793.662174 erren = 0.00000021
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027898 erref = 0.00000237
+ KGRN:  QSCA =  0.029519
+ KGRN:  QCPA = -0.093428  0.093428
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.783999 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742994 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.783999     -0.742994
+ KGRN:  Iteration no.  29 Etot =    -2793.662174 erren = 0.00000016
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027899 erref = 0.00000176
+ KGRN:  QSCA =  0.029521
+ KGRN:  QCPA = -0.093427  0.093427
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784000 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742997 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784000     -0.742997
+ KGRN:  Iteration no.  30 Etot =    -2793.662174 erren = 0.00000013
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027900 erref = 0.00000131
+ KGRN:  QSCA =  0.029523
+ KGRN:  QCPA = -0.093426  0.093426
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784001 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742998 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784001     -0.742998
+ KGRN:  Iteration no.  31 Etot =    -2793.662174 erren = 0.00000010
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027901 erref = 0.00000098
+ KGRN:  QSCA =  0.029524
+ KGRN:  QCPA = -0.093425  0.093425
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784002 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.742999 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784002     -0.742999
+ KGRN:  Iteration no.  32 Etot =    -2793.662174 erren = 0.00000008
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027902 erref = 0.00000073
+ KGRN:  QSCA =  0.029524
+ KGRN:  QCPA = -0.093424  0.093424
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000-0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784003 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.743000 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784003     -0.743000
+ KGRN:  Iteration no.  33 Etot =    -2793.662174 erren = 0.00000006
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027903 erref = 0.00000054
+ KGRN:  QSCA =  0.029525
+ KGRN:  QCPA = -0.093424  0.093424
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784003 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.743001 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784003     -0.743001
+ KGRN:  Iteration no.  34 Etot =    -2793.662174 erren = 0.00000005
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027903 erref = 0.00000040
+ KGRN:  QSCA =  0.029525
+ KGRN:  QCPA = -0.093423  0.093423
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784004 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.743001 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784004     -0.743001
+ KGRN:  Iteration no.  35 Etot =    -2793.662174 erren = 0.00000004
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027903 erref = 0.00000030
+ KGRN:  QSCA =  0.029526
+ KGRN:  QCPA = -0.093423  0.093423
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784004 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.743002 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784004     -0.743002
+ KGRN:  Iteration no.  36 Etot =    -2793.662174 erren = 0.00000003
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027903 erref = 0.00000022
+ KGRN:  QSCA =  0.029526
+ KGRN:  QCPA = -0.093423  0.093423
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784004 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.743002 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784004     -0.743002
+ KGRN:  Iteration no.  37 Etot =    -2793.662174 erren = 0.00000002
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027903 erref = 0.00000017
+ KGRN:  QSCA =  0.029526
+ KGRN:  QCPA = -0.093423  0.093423
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000-0.0000-0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784004 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.743002 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784004     -0.743002
+ KGRN:  Iteration no.  38 Etot =    -2793.662174 erren = 0.00000002
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027904 erref = 0.00000013
+ KGRN:  QSCA =  0.029526
+ KGRN:  QCPA = -0.093423  0.093423
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401 0.0000-0.0000-0.0000 0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784004 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.743002 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784004     -0.743002
+ KGRN:  Iteration no.  39 Etot =    -2793.662174 erren = 0.00000001
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027904 erref = 0.00000009
+ KGRN:  QSCA =  0.029526
+ KGRN:  QCPA = -0.093423  0.093423
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ MLTPM:    Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1  9.0062 1.6401-0.0000 0.0000 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000
+ Tot  9.0062
+ MLTPM:    Non vanishing higher moments for IQ =  1
+            21 -0.001496
+            25 -0.001264
+            43  0.000122
+            47 -0.000322
+ OPTPOT:   Fbar =  0.000000 g = -0.784004 VolI =  0.000000
+ OPTPOT:   Fbar =  0.000000 g = -0.743002 VolI =  0.000000
+           VMTZ(Up,Dwn) =      -0.784004     -0.743002
+ KGRN:  Iteration no.  40 Etot =    -2793.662174 erren = 0.00000001
+        Magn. mom. =  1.640
+        Dyson loops    32 EF   =       -0.027904 erref = 0.00000007
+ KGRN:  QSCA =  0.029526
+ KGRN:  QCPA = -0.093423  0.093423
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ PATHOP: CPA equation for IS =  2 converged in  3- 5 iterations
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed 11 to 11
+ PATHOP: CPA equation for IS =  2 converged in  4- 5 iterations
+ EBTOP:      Bot       Top
+            -0.700459 10.830854
+ FESPTH: CPA equation for IS =  1 converged in 11-11 iterations
+         DOS(EF) = 11.016738
+ FESPTH: CPA equation for IS =  2 converged in  4- 4 iterations
+         DOS(EF) =  4.777306
+ ZMESH:    Semi-elliptic contour
+ ZMESH:    ELT  =  9.000000 EB   = -0.107524 EFX= -0.027904
+           DELTA=  0.079621 b/a  = -0.062500 EPS=  0.200000
+           LZ     Re(z)     Im(z)    Weight
+            1  -0.106738 -0.000698  0.004037 -0.001782
+            2  -0.090230 -0.003097  0.029479 -0.002318
+            3  -0.061079 -0.004524  0.023505 -0.000673
+            4  -0.044385 -0.004869  0.011188 -0.000148
+            5  -0.036409 -0.004948  0.005561 -0.000037
+            6  -0.032220 -0.004969  0.003139 -0.000011
+            7  -0.029732 -0.004975  0.001942 -0.000003
+            8  -0.028278 -0.004976  0.000937 -0.000000
+            9  -0.027530 -0.004976  0.000937  0.000000
+           10  -0.026076 -0.004975  0.001942  0.000003
+           11  -0.023587 -0.004969  0.003139  0.000011
+           12  -0.019399 -0.004948  0.005561  0.000037
+           13  -0.011422 -0.004869  0.011188  0.000148
+           14   0.005271 -0.004524  0.023505  0.000673
+           15   0.034422 -0.003097  0.029479  0.002318
+           16   0.050930 -0.000698  0.004037  0.001782
+ DOSPTH: CPA equation for IS =  1 not converged
+         number of iterations performed 11-11
+ DOSPTH: CPA equation for IS =  2 converged in  4- 7 iterations
+ ZMESH:    Semi-circular contour
+           ELT  =  9.000000 EB   = -1.437904 EFX= -0.027904
+           DEPTH=  0.940000 DELTA=  0.079621 EPS=  0.200000
+           LZ     Re(z)     Im(z)    Weight
+            1  -0.967328 -0.023254  0.002927 -0.059079
+            2  -0.953194 -0.116666  0.031605 -0.123339
+            3  -0.892075 -0.255987  0.094851 -0.146053
+            4  -0.762223 -0.388633  0.161486 -0.109831
+            5  -0.582229 -0.462373  0.190019 -0.034655
+            6  -0.398616 -0.459393  0.170455  0.036840
+            7  -0.250040 -0.399329  0.124769  0.077444
+            8  -0.149092 -0.315008  0.078522  0.086948
+            9  -0.088900 -0.231551  0.044170  0.078020
+           10  -0.056386 -0.161128  0.022781  0.062423
+           11  -0.040171 -0.106680  0.010899  0.046765
+           12  -0.032669 -0.066757  0.004816  0.033563
+           13  -0.029492 -0.038601  0.001912  0.023197
+           14  -0.028311 -0.019571  0.000634  0.015204
+           15  -0.027966 -0.007629  0.000145  0.008907
+           16  -0.027906 -0.001413  0.000011  0.003648
+           LX     Re(z)     Im(z)
+            1  -0.029906 -0.001413
+            2  -0.028906 -0.001413
+            3  -0.027906 -0.001413
+            4  -0.026906 -0.001413
+            5  -0.025906 -0.001413
+ Atom:Fe              S =    2.642540        SWS =    2.642540
+ Exch:PBE                              Date : 27-Jan-23
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2      s  1/2      p  1/2      d  1/2      f  1/2
+ E-nu       =   -0.390373   -0.230345   -0.153012   -0.155610   -0.418212   -0.279906   -0.205758   -0.216394
+ D-nu       =   -0.538738    0.281425   -0.547564    2.353910   -0.574249    0.314865   -2.403516    2.416963
+ Dnud       =    6.262159    7.867867    2.241077   11.903817    6.110629    7.745125    1.907540   11.884605
+ Omega-     =    0.193797    1.075555    0.163678    4.212959    0.172460    1.071154    0.018326    4.242933
+ S*Phisq-   =   -0.393460    0.362444    0.035511    0.398147   -0.380819    0.352811    0.026990    0.394096
+ Phi-/Phi+  =    0.862300    0.695983    0.045998    0.559854    0.859365    0.692154   -0.018840    0.559322
+ Mu         =    0.727924    0.790215    8.065319    0.719355    0.752087    0.811791   10.611739    0.726750
+ Tau        =    0.811884    0.956936    0.059726    1.014624    0.833134    0.972276    0.013184    1.023106
+ A          =    2.660795    4.421764    0.196783   10.389412    2.462114    4.229440   -0.054978   10.286600
+ C          =   -0.196576    0.845211    0.010666    4.057349   -0.245752    0.791248   -0.187432    4.026540
+ B          =   -0.652867   -0.063944   -0.238478    1.929606   -0.688892   -0.096586   -0.395742    1.919592
+ V          =   -0.652867   -0.717088   -3.849447   -0.920791   -0.688892   -0.737942    6.975316   -0.905634
+ D(Ef)      =   -1.460790   -0.064077   -2.149301    2.236824   -1.629735   -0.125663   19.181731    2.243908
+ Bot, Top   =   -0.700459   10.830854
+ V-Madelung =    0.030516
+ V(S) Up,Dwn=   -0.818405                                       -0.773749
+ V(W) Up,Dwn=   -0.818405                                       -0.773749
+ Atom:Ni              S =    2.642540        SWS =    2.642540
+ Exch:PBE                              Date : 27-Jan-23
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2      s  1/2      p  1/2      d  1/2      f  1/2
+ E-nu       =   -0.394538   -0.230644   -0.159307   -0.155497   -0.418025   -0.279475   -0.189591   -0.216286
+ D-nu       =   -0.683522    0.203578   -1.605673    2.425031   -0.595585    0.319187   -2.247280    2.508474
+ Dnud       =    5.720529    7.317515    1.879506   12.088179    5.752671    7.406291    1.860645   12.209870
+ Omega-     =    0.120568    0.977211    0.044707    4.330588    0.154223    1.039868    0.018567    4.435571
+ S*Phisq-   =   -0.363028    0.338587    0.022901    0.404840   -0.358509    0.337826    0.020846    0.407873
+ Phi-/Phi+  =    0.851202    0.678026   -0.024694    0.564898    0.851910    0.681065   -0.028670    0.568164
+ Mu         =    0.788945    0.845896   12.506304    0.707463    0.798891    0.847801   13.738972    0.702202
+ Tau        =    0.857439    0.972186    0.026692    1.015912    0.869694    0.983129    0.039525    1.020052
+ A          =    2.165772    3.901352   -0.002854   10.688231    2.157088    3.938082   -0.069697   10.830854
+ C          =   -0.273970    0.746567   -0.114601    4.175092   -0.263802    0.760393   -0.171024    4.219284
+ B          =   -0.700459   -0.115689   -0.292966    2.019882   -0.684631   -0.097713   -0.334399    2.053309
+ V          =   -0.700459   -0.751547    4.522410   -0.841532   -0.684631   -0.727686    3.464571   -0.805867
+ D(Ef)      =   -1.762268   -0.163915  -25.375085    2.309963   -1.739324   -0.131163   11.277289    2.340133
+ Bot, Top   =   -0.700459   10.830854
+ V-Madelung =   -0.054615
+ V(S) Up,Dwn=   -0.748751                                       -0.710675
+ V(W) Up,Dwn=   -0.748751                                       -0.710675
+ EF         =   -0.027904
+ VMTZ Up,Dwn=   -0.784004                                       -0.743002
+ Atom:Fe  
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2      s  1/2      p  1/2      d  1/2      f  1/2
+ Nos(Ef)    =    0.329291    0.372174    1.949646    0.020999    0.318143    0.322456    4.549512    0.021742
+ Nos(Ef)    =    7.883963
+ Dos(Ef)    =    0.105943    0.503143   10.312293    0.068230    0.230758    0.425416    1.843676    0.008613
+ Dos(Ef)    =   13.498073
+ Magn. mom. =    2.539743    1.640140
+ Stoner-I   =    0.019363    0.021247    0.077999    0.012131
+ Hopfield   =    0.043467 (Ry/Bohr^2),     2.111962 (eV/AA^2)
+ Hopfield   =    0.010490 (Ry/Bohr^2),     0.509677 (eV/AA^2)
+ Atom:Ni  
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2      s  1/2      p  1/2      d  1/2      f  1/2
+ Nos(Ef)    =    0.355404    0.388314    3.922739    0.021292    0.334697    0.329569    4.742047    0.021974
+ Nos(Ef)    =   10.116037
+ Dos(Ef)    =    0.112812    0.521422   10.911626    0.069282    0.245805    0.436766    1.720565    0.008684
+ Dos(Ef)    =   14.026962
+ Magn. mom. =    0.740538    1.640140
+ Stoner-I   =   -0.013730   -0.018670    0.076193   -0.059676
+ Hopfield   =    0.038636 (Ry/Bohr^2),     1.877202 (eV/AA^2)
+ Hopfield   =    0.008280 (Ry/Bohr^2),     0.402283 (eV/AA^2)
+ PRNPRM:   EONE =  -1490.074754 VINT =  -4070.801178 EKIN =   2580.726424
+           ECOR =   1043.956953 ENUC =  -6101.732317 EMADL=     -0.001969
+           EVAL =     43.297476 EXCT =   -111.862450 EXCC =      0.000000
+           ETOT =  -2545.615883 OKAE =     -0.000000 E[n] =  -2545.615883
+            T*S =      0.000000 E-TS =  -2545.615883
+ PRNPRM:   EONE =  -1763.538396 VINT =  -4854.022377 EKIN =   3090.483981
+           ECOR =   1237.183025 ENUC =  -7321.843340 EMADL=     -0.001969
+           EVAL =     79.691051 EXCT =   -127.221214 EXCC =      0.000000
+           ETOT =  -3041.708466 OKAE =      0.000000 E[n] =  -3041.708466
+            T*S =      0.000000 E-TS =  -3041.708466
+           Total energies in the soft core approximation (Rydbergs)
+           calculated from output charge density:
+           Kinetic energy      2580.726424
+           Madelung energy       -0.001969
+           El-ion energy      -6101.732317
+           El-el energy        1087.254429
+           Exc energy          -111.862450
+                              ------------
+           Total              -2545.615883
+           Total+OKAE         -2545.615883
+           Total+Ewald        -2545.586546 4pi SS n(S)=  3.479481
+           Kinetic energy      3090.483981
+           Madelung energy       -0.001969
+           El-ion energy      -7321.843340
+           El-el energy        1316.874077
+           Exc energy          -127.221214
+                              ------------
+           Total              -3041.708466
+           Total+OKAE         -3041.708466
+           Total+Ewald        -3041.681458 4pi SS n(S)=  3.338580
+           Total energy       -2793.662174
+           Total energy+OKA   -2793.662174
+           Total+Ewald        -2793.634002
+                              ============
+result   2.642540  -2545.615883 -0.756101 -0.715099 -0.027904 -0.784004 -0.743002
+result   2.642540  -3041.708466 -0.756101 -0.715099 -0.027904 -0.784004 -0.743002
+ Converged in 41 iterations at 15:09  27-Jan-23
+ Calculation of the full charge density, lmaxh =  8
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ FCDPTH: CPA equation for IS =  2 converged in  3- 5 iterations
+ KKRFCD: NOS(Ef) =  8.999999 ELT =  9.000000
+ MGAUN:    Generate real Gaunt numbers
+ MGAUNT:   NGAUNT = 23621
+ GRNFCD: Construct the full charge density
+ ROTCHD:   Performe the 3D rotations
+ ELDENS:   Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1 25.9474 2.5397 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000
+   1 28.1342 0.7405 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000
+ Tot 27.0408
+ ELDENS:   Non vanishing higher moments for IQ =  1 ITA = 1
+            21 -0.004405
+            25 -0.003723
+            43 -0.000767
+            47  0.002030
+            73  0.000188
+            77  0.000100
+            81  0.000153
+ ELDENS:   Non vanishing higher moments for IQ =  1 ITA = 2
+            21 -0.003124
+            25 -0.002641
+            43 -0.000717
+            47  0.001897
+            73  0.000170
+            77  0.000090
+            81  0.000138
+ Calculation of the SCA full charge density, lmax =  3
+ PATHOP: CPA equation for IS = 1 not converged
+         number of iterations performed  3 to 11
+ FCDPTH: CPA equation for IS =  2 converged in  3- 5 iterations
+ KKRFCD: NOS(Ef) =  8.999999 ELT =  9.000000
+ MGAUN:    Generate real Gaunt numbers
+ MGAUNT:   NGAUNT =   708
+ GRNFCD: Construct the full charge density
+ ROTCHD:   Performe the 3D rotations
+ ELDENS:   Multipole moments
+  IQ    s    Spin     y      z      x      xy     yz   3zz-1    xz   xx-yy
+ 3xx y   xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+   1 25.9361 2.5397-0.0000 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000
+   1 28.1229 0.7405 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000-0.0000
+ Tot 27.0295
+ ELDENS:   Non vanishing higher moments for IQ =  1 ITA = 1
+            21 -0.002127
+            25 -0.001798
+            43  0.000123
+            47 -0.000326
+ ELDENS:   Non vanishing higher moments for IQ =  1 ITA = 2
+            21 -0.000864
+            25 -0.000730
+            43  0.000120
+            47 -0.000317
+ Full charge density stored on:27-Jan-23
+ KGRN calculation finished at 15:09 on 27-Jan-23
