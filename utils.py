@@ -56,6 +56,8 @@ def category_classify(string):
 			return 'MLTPM2'
 		else:
 			raise KeyError(f'Something worng! {token[0]} {token[1]}')
+	elif token[0] == 'PATHOP:':
+		return 'PATHOP'
 	elif token[0] == 'EBTOP:':
 		return 'EBTOP'
 	else:
