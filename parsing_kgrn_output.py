@@ -26,7 +26,7 @@ clist = lines
 
 # testing parameters
 ns = 2
-nq = 8
+nq = 1
 afm = 'F'
 
 # extract info.

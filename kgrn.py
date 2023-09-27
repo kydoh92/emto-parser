@@ -22,6 +22,8 @@ def CALL_CATEGORY(clist, nq, afm, ns):
 		return target, KGRN2(clist)
 	elif target == 'KGRN4':
 		return target, KGRN2(clist)
+	elif target == 'PATHOP':
+		return target, MLTPM2(clist)
 	elif target == 'EBTOP':
 		return target, None
 	else:
@@ -40,7 +42,7 @@ def MLTPM1(clist, spin, nq):   #Multipole
 	Tot = tokenizer(clist.pop(0))
 	return [list_mltpm, Tot]
 
-def MLTPM2(clist):    #Non vanishing
+def MLTPM2(clist):    #Non vanishing #PATHOP
 	del(clist[0])
 	while category_cognition(clist[0]) is 0:
 		del(clist[0])
