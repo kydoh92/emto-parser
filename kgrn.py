@@ -26,8 +26,13 @@ def CALL_CATEGORY(clist, nq, afm, ns):
 		return target, MLTPM2(clist)
 	elif target == 'EBTOP':
 		return target, EBTOP(clist)
+	elif target == 'FESPTH':
+		return target, FESPTH(clist)
 	else:
 		raise KeyError(f'{target} is Not implemented yet!')
+
+def FESPTH(clist):
+	del(clist[0])
 
 def EBTOP(clist):
 	del(clist[0])
