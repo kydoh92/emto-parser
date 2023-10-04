@@ -60,6 +60,10 @@ def category_classify(string):
 		return 'PATHOP'
 	elif token[0] == 'EBTOP:':
 		return 'EBTOP'
+	elif token[0] == 'FESPTH:':
+		return 'FESPTH'
+	elif token[0] == 'ZMESH:':
+		return 'ZMESH'
 	else:
 		raise KeyError(f'{token[0]} is Not implemented!')
 

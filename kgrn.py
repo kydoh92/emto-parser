@@ -25,9 +25,14 @@ def CALL_CATEGORY(clist, nq, afm, ns):
 	elif target == 'PATHOP':
 		return target, MLTPM2(clist)
 	elif target == 'EBTOP':
-		return target, None
+		return target, EBTOP(clist)
 	else:
 		raise KeyError(f'{target} is Not implemented yet!')
+
+def EBTOP(clist):
+	del(clist[0])
+	bot,top = tokenizer2(clist.pop(0), even=0)
+	return [bot,top]
 
 def MLTPM1(clist, spin, nq):   #Multipole
 	del(clist[0:3])

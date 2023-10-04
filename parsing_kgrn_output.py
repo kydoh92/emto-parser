@@ -42,7 +42,9 @@ while clist != []:
 	values.append([CALL_CATEGORY(clist, nq, afm, ns)])
 	b = len(clist)
 	print(values[-1][0][0],a-b)
-	if values[-1][0][0] == 'EBTOP':
+	if values[-1][0][0] == 'FESPTH':
+		break # 뒷 부분 category 처리 함수가 작성 중
+	elif values[-1][0][0] == 'ZMESH':
 		break # 뒷 부분 category 처리 함수가 작성 중
 
 
