@@ -23,7 +23,7 @@ def tokenizer2(string, even=1, spl1='=', spl2=' '):
         return token[1::2]
     if even == 0:
         return token
-
+'''
 def category_cognition(string):
 	tmp = string[:11].strip()
 	if tmp is '':
@@ -32,6 +32,17 @@ def category_cognition(string):
 	if token[0][-1] is ':':
 		return 1
 	else:
+		return 0
+'''
+def category_cognition(string):
+	tmp = string[:11].strip()
+	if tmp is '':
+		return 0
+	token = re.sub(' +', ' ', tmp).split(' ')
+	try:
+		token[0].index(':')
+		return 1
+	except:
 		return 0
 
 def category_classify(string):
@@ -62,8 +73,12 @@ def category_classify(string):
 		return 'EBTOP'
 	elif token[0] == 'FESPTH:':
 		return 'FESPTH'
+	elif token[0] == 'DOSPTH:':
+		return 'DOSPTH'
 	elif token[0] == 'ZMESH:':
 		return 'ZMESH'
+	elif token[0][:5] == 'Atom:':
+		return 'PRNPRM'
 	else:
 		raise KeyError(f'{token[0]} is Not implemented!')
 

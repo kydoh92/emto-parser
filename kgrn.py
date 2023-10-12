@@ -28,8 +28,87 @@ def CALL_CATEGORY(clist, nq, afm, ns):
 		return target, EBTOP(clist)
 	elif target == 'FESPTH':
 		return target, FESPTH(clist)
+	elif target == 'ZMESH':
+		return target, ZMESH(clist)
+	elif target == 'DOSPTH':
+		return target, DOSPTH(clist)
+	elif target == 'PRNPRM':
+		return target, PRNPRM(clist, ntnta, zmsh)
 	else:
 		raise KeyError(f'{target} is Not implemented yet!')
+
+def PRNPRM(clist, ntnta, zmsh, lmax):
+	if lmax > 3:
+		raise KeyError(f'{lmax} > 3 is Not implemented yet!')
+	
+	if zmsh is 'M' or zmsh is 'm' or zmsh if 'f':
+		np = 2
+	else:
+		np = 1
+	
+
+	PRNPRM1 = list()
+	for nta in ntnta:
+		it_list = list()
+		for ita in nta:
+			ita_list = list()
+			for ip in range(np):
+				ip_list = list()
+				del(clist[0:3]) # del lines of Atom, Exch, and Panel
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # E-nu
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # D-nu    
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Dnud    
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Omega-  
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # S+Phisq-
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Phi-/Phi+     
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Mu      
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Tau     
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # A       
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # C       
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # B       
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # V       
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # D(Ef)     
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[2:]) # Bot, Top
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # V-Madelung
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[2:]) # V(S) Up,Dwn
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[2:]) # V(W) Up,Dwn
+				ita_list.append(ip_list)
+			it_list.append(ita_list)
+		PRNPRM1.append(it_list)
+	
+	PRNPRM2 = list()
+	PRNPRM2.append(tokenizer2(clist.pop(0), even=0)[1:])
+	PRNPRM2.append(tokenizer2(clist.pop(0), even=0)[1:])
+
+	PRNPRM3 = list()
+	for nta in ntnta:
+		it_list = list()
+		for ita in nta:
+			ita_list = list()
+			for ip in range(np):
+				ip_list = list()
+				del(clist[0:2]) # del lines of Atom and Panel
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Nos(Ef)
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Nos(Ef)-sum
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Dos(Ef)
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Dos(Ef)-sum
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[2:]) # Magn. mom.
+				ip_list.append(tokenizer2(clist.pop(0), even=0)[1:]) # Stoner-I
+				ip_list.append(tokenizer2(clist.pop(0), even=1)) # Hopfield
+				ip_list.append(tokenizer2(clist.pop(0), even=1)) # HopField
+				ita_list.append(ip_list)
+			it_list.append(ita_list)
+		PRNPRM3.append(it_list)
+	
+
+
+def DOSPTH(clist):
+	del(clist[0])
+
+def ZMESH(clist):
+	del(clist[0])
+	while clist[0][1] == ' ':
+		del(clist[0])
 
 def FESPTH(clist):
 	del(clist[0])
