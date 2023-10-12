@@ -47,7 +47,7 @@ def PRNPRM(clist, ntnta, zmsh, lmax):
 		np = 1
 	
 
-	PRNPRM1 = list()
+	PRNPRM1 = list() # potential parameters
 	for nta in ntnta:
 		it_list = list()
 		for ita in nta:
@@ -76,11 +76,11 @@ def PRNPRM(clist, ntnta, zmsh, lmax):
 			it_list.append(ita_list)
 		PRNPRM1.append(it_list)
 	
-	PRNPRM2 = list()
+	PRNPRM2 = list() # Fermi level & muffin-tin potential
 	PRNPRM2.append(tokenizer2(clist.pop(0), even=0)[1:])
 	PRNPRM2.append(tokenizer2(clist.pop(0), even=0)[1:])
 
-	PRNPRM3 = list()
+	PRNPRM3 = list() # moments
 	for nta in ntnta:
 		it_list = list()
 		for ita in nta:
@@ -100,7 +100,51 @@ def PRNPRM(clist, ntnta, zmsh, lmax):
 			it_list.append(ita_list)
 		PRNPRM3.append(it_list)
 	
-
+	PRNPRM4 = list() # PRNPRM
+	for nta in ntnta:
+		it_list = list()
+		for ita in nta:
+			ita_list = list()
+			ita_list.append(tokenizer2(clist.pop(0)[9:])) # EONE, VINT, EKIN
+			ita_list.append(tokenizer2(clist.pop(0))) # ECOR, ENUC, EMADL
+			ita_list.append(tokenizer2(clist.pop(0))) # EVAL, EXCT, EXCC 
+			ita_list.append(tokenizer2(clist.pop(0))) # ETOT, OKAE, E[n] 
+			ita_list.append(tokenizer2(clist.pop(0))) # T*S , E-TS       
+			it_list.append(ita_list)
+		PRNPRM4.append(it_list)
+	
+	PRNPRM5 = list() # energy
+	del(clist[0:2])
+	for nta in ntnta:
+		it_list = list()
+		for ita in nta:
+			ita_list = list()
+			ita_list.append(tokenizer2(clist.pop(0), even=0)[2]) # Kinetic energy
+			ita_list.append(tokenizer2(clist.pop(0), even=0)[2]) # Madelung energy
+			ita_list.append(tokenizer2(clist.pop(0), even=0)[2]) # El-ion energy
+			ita_list.append(tokenizer2(clist.pop(0), even=0)[2]) # El-el energy
+			ita_list.append(tokenizer2(clist.pop(0), even=0)[2]) # Exc energy
+			del(clist[0])
+			ita_list.append(tokenizer2(clist.pop(0), even=0)[1]) # Total     
+			ita_list.append(tokenizer2(clist.pop(0), even=0)[1]) # Total+OKAE
+			ita_list.append(tokenizer2(clist.pop(0), even=0)[1::4]) # Total+Ewald, 4pi SS n(S)
+	
+	PRNPRM6 = list()
+	N = 0
+	for nta in ntnta:
+		for ita in nta:
+			N = N + 1
+	if N > 1:
+		PRNPRM6.append(tokenizer2(clist.pop(0), even=0)[2]) # Total energy
+		PRNPRM6.append(tokenizer2(clist.pop(0), even=0)[2]) # Total energy+OKA
+		PRNPRM6.append(tokenizer2(clist.pop(0), even=0)[1]) # Total+Ewald
+	else:
+		PRNPRM6.append(PRNPRM5[0][5])
+		PRNPRM6.append(PRNPRM5[0][6])
+		PRNPRM6.append(PRNPRM5[0][7][0])
+	
+	# PRNPRM7 은 특수한 중복정보 이므로 생략함.
+	return [PRNPRM1,PRNPRM2,PRNPRM3,PRNPRM4,PRNPRM5,PRNPRM6]
 
 def DOSPTH(clist):
 	del(clist[0])
