@@ -79,6 +79,8 @@ def category_classify(string):
 		return 'ZMESH'
 	elif token[0][:5] == 'Atom:':
 		return 'PRNPRM'
+	elif token[0] == 'FCDPTH:':
+		return 'FCDPTH'
 	else:
 		raise KeyError(f'{token[0]} is Not implemented!')
 

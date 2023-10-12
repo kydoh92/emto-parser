@@ -3,7 +3,7 @@ import utils as ut
 from utils import tokenizer, tokenizer2, check_category, check_dat
 from utils import category_cognition, category_classify
 
-def CALL_CATEGORY(clist, nq, afm, ns):
+def CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax):
 	while category_cognition(clist[0]) is 0:
 		del(clist[0])
 	target = category_classify(clist[0])
@@ -33,7 +33,9 @@ def CALL_CATEGORY(clist, nq, afm, ns):
 	elif target == 'DOSPTH':
 		return target, DOSPTH(clist)
 	elif target == 'PRNPRM':
-		return target, PRNPRM(clist, ntnta, zmsh)
+		return target, PRNPRM(clist, ntnta, zmsh, lmax)
+	elif target == 'FCDPTH':
+		return target, None
 	else:
 		raise KeyError(f'{target} is Not implemented yet!')
 
@@ -41,7 +43,7 @@ def PRNPRM(clist, ntnta, zmsh, lmax):
 	if lmax > 3:
 		raise KeyError(f'{lmax} > 3 is Not implemented yet!')
 	
-	if zmsh is 'M' or zmsh is 'm' or zmsh if 'f':
+	if zmsh is 'M' or zmsh is 'm' or zmsh is 'f':
 		np = 2
 	else:
 		np = 1

@@ -28,6 +28,9 @@ clist = lines
 ns = 2
 nq = 1
 afm = 'F'
+ntnta = [['Fe','Ni']]
+zmsh = 'C'
+lmax = 3
 
 # extract info.
 values = list()
@@ -39,10 +42,10 @@ values = list()
 
 while clist != []:
 	a = len(clist)
-	values.append([CALL_CATEGORY(clist, nq, afm, ns)])
+	values.append([CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax)])
 	b = len(clist)
 	print(values[-1][0][0],a-b)
-	if values[-1][0][0] == 'Atom':
+	if values[-1][0][0] == 'FCDPTH':
 		break # 뒷 부분 category 처리 함수가 작성 중
 
 print(values)
