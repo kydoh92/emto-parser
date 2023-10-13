@@ -77,10 +77,14 @@ def category_classify(string):
 		return 'DOSPTH'
 	elif token[0] == 'ZMESH:':
 		return 'ZMESH'
+	elif token[0] == 'ZMESH:**':
+		return 'ZMESHwarning'
 	elif token[0][:5] == 'Atom:':
 		return 'PRNPRM'
 	elif token[0] == 'FCDPTH:':
 		return 'FCDPTH'
+	elif token[0] == 'KKRFCD:':
+		return 'KKRFCD'
 	else:
 		raise KeyError(f'{token[0]} is Not implemented!')
 

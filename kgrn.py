@@ -10,8 +10,8 @@ def CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax):
 	#print(target)
 	if target == 'MLTPM1':
 		return target, MLTPM1(clist, ns, nq)
-	elif target == 'MLTPM2':
-		return target, MLTPM2(clist)
+	elif target == 'MLTPM2': # throw away
+		return MLTPM2(clist)
 	elif target == 'OPTPOT':
 		return target, OPTPOT(clist, ns)
 	elif target == 'KGRN1':
@@ -22,19 +22,23 @@ def CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax):
 		return target, KGRN2(clist)
 	elif target == 'KGRN4':
 		return target, KGRN2(clist)
-	elif target == 'PATHOP':
-		return target, MLTPM2(clist)
+	elif target == 'PATHOP': # throw away
+		return MLTPM2(clist)
 	elif target == 'EBTOP':
 		return target, EBTOP(clist)
 	elif target == 'FESPTH':
 		return target, FESPTH(clist)
 	elif target == 'ZMESH':
 		return target, ZMESH(clist)
+	elif target == 'ZMESHwarning': # throw away
+		return MLTPM2(clist)
 	elif target == 'DOSPTH':
 		return target, DOSPTH(clist)
 	elif target == 'PRNPRM':
 		return target, PRNPRM(clist, ntnta, zmsh, lmax)
 	elif target == 'FCDPTH':
+		return target, None
+	elif target == 'KKRFCD':
 		return target, None
 	else:
 		raise KeyError(f'{target} is Not implemented yet!')
@@ -181,6 +185,7 @@ def MLTPM2(clist):    #Non vanishing #PATHOP
 	del(clist[0])
 	while category_cognition(clist[0]) is 0:
 		del(clist[0])
+	return None
 
 def OPTPOT(clist, spin):
 	# parse Fbar, g, VolI for spins

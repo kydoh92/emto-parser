@@ -24,13 +24,23 @@ with open(filepath,'r') as f:
 
 clist = lines
 
+hp_type = 'Al'
+
 # testing parameters
-ns = 2
-nq = 1
-afm = 'F'
-ntnta = [['Fe','Ni']]
-zmsh = 'C'
-lmax = 3
+if hp_type is 'Fe':
+	ns = 2
+	nq = 1
+	afm = 'F'
+	ntnta = [['Fe','Ni']]
+	zmsh = 'C'
+	lmax = 3
+elif hp_type is 'Al':
+	ns = 2
+	nq = 8
+	afm = 'F'
+	ntnta = [['Al'],['Co'],['Co'],['Co'],['Co'],['Co'],['Co'],['Al']]
+	zmsh = 'C'
+	lmax = 3
 
 # extract info.
 values = list()
@@ -42,10 +52,14 @@ values = list()
 
 while clist != []:
 	a = len(clist)
-	values.append([CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax)])
+	value = [CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax)]
+	if value[0] is not None:
+		values.append(value)
 	b = len(clist)
 	print(values[-1][0][0],a-b)
 	if values[-1][0][0] == 'FCDPTH':
+		break # 뒷 부분 category 처리 함수가 작성 중
+	elif values[-1][0][0] == 'KKRFCD':
 		break # 뒷 부분 category 처리 함수가 작성 중
 
 print(values)
