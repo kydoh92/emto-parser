@@ -24,7 +24,7 @@ with open(filepath,'r') as f:
 
 clist = lines
 
-hp_type = 'Al'
+hp_type = 'Fe'
 
 # testing parameters
 if hp_type is 'Fe':
