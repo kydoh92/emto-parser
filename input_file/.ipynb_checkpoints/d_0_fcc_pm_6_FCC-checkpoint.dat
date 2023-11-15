@@ -1,0 +1,10 @@
+KFCD      MSGL..=  0                               15.3.2023
+JOBNAM...=d_0_fcc_pm_6_FCC
+STRNAM...=6_FCC
+DIR001=../../kstr/6_FCC/smx/
+DIR002=../../kgrn/7_6_FCC/chd/
+DIR003=../../shape/6_FCC/shp/
+DIR004=../../bmdl/6_FCC/mdl/
+DIR006=prn/
+Lmaxs.= 30 NTH..= 41 NFI..= 81 FPOT..= N
+OVCOR.=  Y UBG..=  N NPRN.=  0
