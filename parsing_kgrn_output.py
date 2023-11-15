@@ -1,8 +1,6 @@
 #!/usr/local/anaconda3/bin/python
 import sys
 import utils as ut
-from kgrn import MLTPM1, MLTPM2, OPTPOT
-from kgrn import KGRN1
 from kgrn import CALL_CATEGORY
 import json
 
@@ -24,7 +22,7 @@ with open(filepath,'r') as f:
 
 clist = lines
 
-hp_type = 'Fe'
+hp_type = 'Al'
 
 # testing parameters
 if hp_type is 'Fe':
@@ -54,14 +52,17 @@ while clist != []:
 	a = len(clist)
 	value = [CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax)]
 	if value[0] is not None:
-		values.append(value)
+		values.append(value[0])
 	b = len(clist)
 	print(values[-1][0][0],a-b)
-	if values[-1][0][0] == 'FCDPTH':
-		break # 뒷 부분 category 처리 함수가 작성 중
-	elif values[-1][0][0] == 'KKRFCD':
-		break # 뒷 부분 category 처리 함수가 작성 중
+	#if values[-1][0][0] == 'FCDPTH':
+	#	break # 뒷 부분 category 처리 함수가 작성 중
+	#elif values[-1][0][0] == 'KKRFCD':
+	#	break # 뒷 부분 category 처리 함수가 작성 중
 
-print(values)
+for v in values:
+	print(v)
+
+#print(values)
 #print(clist[0])
 #print(ut.category_cognition(clist[0]))

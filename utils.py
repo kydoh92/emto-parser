@@ -5,7 +5,6 @@ import numpy as np
 from numpy import sin, cos, sqrt
 from time import strptime, mktime
 from math import pi, acos
-#test
 
 ### general functions ###
 def tokenizer(string, even=1, spl='='):
@@ -23,70 +22,6 @@ def tokenizer2(string, even=1, spl1='=', spl2=' '):
         return token[1::2]
     if even == 0:
         return token
-'''
-def category_cognition(string):
-	tmp = string[:11].strip()
-	if tmp is '':
-		return 0
-	token = re.sub(' +', ' ', tmp).split(' ')
-	if token[0][-1] is ':':
-		return 1
-	else:
-		return 0
-'''
-def category_cognition(string):
-	tmp = string[:11].strip()
-	if tmp is '':
-		return 0
-	token = re.sub(' +', ' ', tmp).split(' ')
-	try:
-		token[0].index(':')
-		return 1
-	except:
-		return 0
-
-def category_classify(string):
-	token = tokenizer2(string, even=0)
-	if token[0] == 'KGRN:':
-		if token[1] == 'Iteration':
-			return 'KGRN1'
-		elif token[1] == 'QTR':
-			return 'KGRN2'
-		elif token[1] == 'QSCA':
-			return 'KGRN3'
-		elif token[1] == 'QCPA':
-			return 'KGRN4'
-		else:
-			raise KeyError(f'Something worng! {token[0]} {token[1]}')
-	elif token[0] == 'OPTPOT:':
-		return 'OPTPOT'
-	elif token[0] == 'MLTPM:':
-		if token[1] == 'Multipole':
-			return 'MLTPM1'
-		elif token[1] == 'Non':
-			return 'MLTPM2'
-		else:
-			raise KeyError(f'Something worng! {token[0]} {token[1]}')
-	elif token[0] == 'PATHOP:':
-		return 'PATHOP'
-	elif token[0] == 'EBTOP:':
-		return 'EBTOP'
-	elif token[0] == 'FESPTH:':
-		return 'FESPTH'
-	elif token[0] == 'DOSPTH:':
-		return 'DOSPTH'
-	elif token[0] == 'ZMESH:':
-		return 'ZMESH'
-	elif token[0] == 'ZMESH:**':
-		return 'ZMESHwarning'
-	elif token[0][:5] == 'Atom:':
-		return 'PRNPRM'
-	elif token[0] == 'FCDPTH:':
-		return 'FCDPTH'
-	elif token[0] == 'KKRFCD:':
-		return 'KKRFCD'
-	else:
-		raise KeyError(f'{token[0]} is Not implemented!')
 
 def check_category(string, keywd):
 	key = string[0:11].strip().split(':')[0]
@@ -100,11 +35,6 @@ def check_dat(string, keywd):
 		print(" ### Error : keyword mismatch; keyword = "+keywd+", input = "+key+"\n"); sys.exit()
 	return string[5:]
 
-'''
-def flush(f,N=1):
-	for i in range(N):
-		f.readline()
-'''
 def equalfloat(string,N=3,s=10):
 	token = string.split('=')[1:N+1]
 	if N == 1:
@@ -160,6 +90,70 @@ def Cleaning(list_data):
 
 ### special functions ###
 
+def category_cognition(string):
+	tmp = string[:11].strip()
+	if tmp is '':
+		return 0
+	token = re.sub(' +', ' ', tmp).split(' ')
+	try:
+		token[0].index(':')
+		return 1
+	except:
+		return 0
+
+def category_classify(string):
+	token = tokenizer2(string, even=0)
+	if token[0] == 'KGRN:':
+		if token[1] == 'Iteration':
+			return 'KGRN1'
+		elif token[1] == 'QTR':
+			return 'KGRN2'
+		elif token[1] == 'QSCA':
+			return 'KGRN3'
+		elif token[1] == 'QCPA':
+			return 'KGRN4'
+		else:
+			raise KeyError(f'Something worng! {token[0]} {token[1]}')
+	elif token[0] == 'OPTPOT:':
+		return 'OPTPOT'
+	elif token[0] == 'MLTPM:':
+		if token[1] == 'Multipole':
+			return 'MLTPM1'
+		elif token[1] == 'Non':
+			return 'MLTPM2'
+		else:
+			raise KeyError(f'Something worng! {token[0]} {token[1]}')
+	elif token[0] == 'PATHOP:':
+		return 'PATHOP'
+	elif token[0] == 'EBTOP:':
+		return 'EBTOP'
+	elif token[0] == 'FESPTH:':
+		return 'FESPTH'
+	elif token[0] == 'DOSPTH:':
+		return 'DOSPTH'
+	elif token[0] == 'ZMESH:':
+		return 'ZMESH'
+	elif token[0] == 'ZMESH:**':
+		return 'ZMESHwarning'
+	elif token[0][:5] == 'Atom:':
+		return 'PRNPRM'
+	elif token[0] == 'FCDPTH:':
+		return 'FCDPTH'
+	elif token[0] == 'KKRFCD:':
+		return 'KKRFCD'
+	elif token[0] == 'MGAUN:':
+		return 'MGAUN'
+	elif token[0] == 'MGAUNT:':
+		return 'MGAUNT'
+	elif token[0] == 'GRNFCD:':
+		return 'GRNFCD'
+	elif token[0] == 'ROTCHD:':
+		return 'ROTCHD'
+	elif token[0] == 'ELDENS:':
+		return 'ELDENS'
+	else:
+		raise KeyError(f'{token[0]} is Not implemented!')
+
 def lat_headtime(string0,string1):
 	# read time
 	s_HM = string0[74:].rstrip()
@@ -209,7 +203,7 @@ def vector2angle(L):
     gamma = acos(ab/sqrt(aa*bb))
     return alpha, beta, gamma
 
-### micellaneous ###
+### miscellaneous ###
 
 def round0(v):
     return round(v,10)
