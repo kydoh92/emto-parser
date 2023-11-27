@@ -37,7 +37,7 @@ values.append(TOTALE(clines, n_comp))
 END(clines)
 
 # Category
-categories = ['FHNDLR','STRINP','CHDINP', 'INPUT', 'SHPINP', 'OVRLPS', 'SETMADL', 'SETGAUSS', 'ASACHD', 'SETXCP', 'RENORM', 'FCDEN', 'FCDMAD']
+categories = ['FHNDLR','STRINP','CHDINP', 'INPUT', 'SHPINP', 'OVRLPS', 'SETMADL', 'SETGAUSS', 'ASACHD', 'SETXCP', 'RENORM', 'FCDEN', 'FCDMAD','TOTALE']
 
 # Key
 keys = list()
@@ -50,7 +50,7 @@ keys.append(['OVRLPS_matrix', 'MTD'])
 keys.append(['Lmax_struc'])
 keys.append(['NTH', 'NFI'])
 keys.append(['QMM(ASA)', 'QSPIN(ASA)'])
-keys.append(['IXC,TXCH'])
+keys.append(['IXC','TXCH'])
 keys.append(['RS(Re)','QR(Re)','nSi(Re)','nSc(Re)','Cal_ELN'])
 keys.append(['NEL_FCD','Local_Mag', 'LDA', 'PBE', 'P07', 'AM5', 'LAG', 'Kinetic', 'Tot_Mag'])
 keys.append(['Lmax_intercell', 'Lmax_struc_corr', 'Lmax_corr', 'Lmaxo', 'Lmaxi', 'ASA_corr', 'EMM_corr', 'ENR_corr', 'ER_corr', 'EMADL_corr'])

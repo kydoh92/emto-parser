@@ -32,7 +32,7 @@ def STRINP(clines, n_comp):
     NQ = len(n_comp)
     check_category(clines.pop(0), 'STRINP')
     del clines[0:1]
-    WI, WC, WS, WSA = zip(*[tokenizer(clines.pop(0), even=0)[1:] for i in range(NQ)])
+    WI, WC, WS, WSA = zip(*[list(map(float, tokenizer(clines.pop(0), even=0)[1:])) for i in range(NQ)])
     return WI, WC, WS, WSA
 
 def CHDINP(clines, n_comp):
@@ -48,23 +48,23 @@ def CHDINP(clines, n_comp):
 	
 	# Site info.
 	del clines[0:1]
-	WS, JWS, JRI, JRC, ION, Z, ELN, XQTR, CONC = zip(*[tokenizer(clines.pop(0), even=0)[2:] for iq in n_comp for ita in range(n_comp[iq])])
+	WS, JWS, JRI, JRC, ION, Z, ELN, XQTR, CONC = zip(*[list(map(float, tokenizer(clines.pop(0), even=0)[2:])) for iq in n_comp for ita in range(n_comp[iq])])
 	
 	# ASA info.
 	Data = []
 	for iq in n_comp:
-		tmp, data = zip(*[[clines.pop(0)] + [tokenizer(clines.pop(0)) + tokenizer(clines.pop(0)) + tokenizer(clines.pop(0)) + [tokenizer(clines.pop(0))]] for ita in range(n_comp[iq])])
+		tmp, data = zip(*[[clines.pop(0)] + [tokenizer(clines.pop(0)) + tokenizer(clines.pop(0)) + tokenizer(clines.pop(0)) + tokenizer(clines.pop(0))] for ita in range(n_comp[iq])])
 		Data.append(data)
 		del clines[0:1]
 	del clines[0:5]
 	
-	EONE, VINT, EKIN, ECOR, ENUC, EMADL, EVAL, EXCT, EXCC, ETOT = zip(*[Data[iq-1][ita] for iq in n_comp for ita in range(n_comp[iq])])
+	EONE, VINT, EKIN, ECOR, ENUC, EMADL, EVAL, EXCT, EXCC, ETOT = zip(*[list(map(float, Data[iq-1][ita])) for iq in n_comp for ita in range(n_comp[iq])])
 	return JWS, JRI, JRC, ION, Z, ELN, XQTR, CONC, EONE, VINT, EKIN, ECOR, ENUC, EMADL, EVAL, EXCT, EXCC, ETOT
 
 def INPUT(clines):
 	str0 = check_category(clines.pop(0), 'INPUT')
-	Lmax_shape = ut.colonspacestring(str0)
-	Lmax_charg = ut.colonspacestring(clines.pop(0))
+	Lmax_shape = int(ut.colonspacestring(str0))
+	Lmax_charg = int(ut.colonspacestring(clines.pop(0)))
 	return Lmax_shape, Lmax_charg
 
 def SHPINP(clines, n_comp):
@@ -74,7 +74,7 @@ def SHPINP(clines, n_comp):
 	for iq in n_comp:
 		del clines[0:1]
 		for ita in range(n_comp[iq]):
-			jrin, jws, jric = tokenizer(clines.pop(0))
+			jrin, jws, jric = list(map(float, tokenizer(clines.pop(0))))
 			JRIN.append(jrin)
 			JWS.append(jws)
 			JRIC.append(jric)
@@ -110,7 +110,7 @@ def OVRLPS(clines, n_comp):
 					over_mat[iq,jq,1:] = list(map(float, tmp[1:7]))
 			else:
 				del clines[0:NOV]
-			mtd = tokenizer(clines.pop(0), even=0, spl=':')[-2:]
+			mtd = list(map(float, tokenizer(clines.pop(0), even=0, spl=':')[-2:]))
 			MTD.append(mtd)
 	return over_mat.tolist(), MTD
 
@@ -132,7 +132,7 @@ def ASACHD(clines, n_comp, NS):
 		if tokenizer(clines.pop(0), even=0)[0] == 'IS':
 			check_key = 0
 
-	QMM, QSPIN = zip(*[tokenizer(clines.pop(0), even=0)[3:5] for iq in n_comp for ita in range(n_comp[iq]) for ns in range(NS)])
+	QMM, QSPIN = zip(*[list(map(float, tokenizer(clines.pop(0), even=0)[3:5])) for iq in n_comp for ita in range(n_comp[iq]) for ns in range(NS)])
 
 	# force
 	del clines[0:1]
@@ -142,7 +142,7 @@ def ASACHD(clines, n_comp, NS):
 def SETXCP(clines):
 	str0 = check_category(clines.pop(0), 'SETXCP')
 	IXC, TXCH = tokenizer(str0)
-	return IXC, TXCH
+	return int(IXC), TXCH
 
 def RENORM(clines, n_comp, NS, l_nint):
 	check_category(clines.pop(0), 'RENORM')
@@ -162,7 +162,7 @@ def RENORM(clines, n_comp, NS, l_nint):
 			nSi.append(nsi_ns)
 			nSc.append(nsc_ns)
 
-	Cal_ELN = tokenizer(clines.pop(0))
+	Cal_ELN = list(map(float, tokenizer(clines.pop(0))))
 
 	return RS, QR, nSi, nSc, Cal_ELN
 
@@ -176,7 +176,7 @@ def FCDREN(clines, NS):
 	for ns in range(NS):
 		nel_fcd.append(list(ut.e2f(clines.pop(0)))[1])
 	mag = tokenizer(clines.pop(0), even=0)[6]
-	return nel_fcd, mag
+	return nel_fcd, float(mag)
 
 def ENCOMP(clines):
 	check_category(clines.pop(0), 'ENCOMP')
@@ -238,12 +238,12 @@ def FCDEN(clines, n_comp, NS):
 			LAG.append(lag)
 			Kinetic.append(kinetic)
 			
-	Tot_Mag = tokenizer(clines.pop(0), spl=' ')[3]
-	return NEL_FCD, Local_Mag, LDA, PBE, P07, AM5, LAG, Kinetic, [Tot_Mag]
+	Tot_Mag = float(tokenizer(clines.pop(0), spl=' ')[3])
+	return NEL_FCD, Local_Mag, LDA, PBE, P07, AM5, LAG, Kinetic, Tot_Mag
 
 def LITTLB(clines):
 	str0 = check_category(clines.pop(0), 'LITTLB')
-	lmax_corr, lmaxo, lmaxi = tokenizer(str0)
+	lmax_corr, lmaxo, lmaxi = list(map(int, tokenizer(str0)))
 	return lmax_corr, lmaxo, lmaxi
 
 def OVCORR(clines, n_comp):
@@ -265,7 +265,7 @@ def OVCORR(clines, n_comp):
 		Lmax_corr.append(lmax_corr)
 		Lmaxo.append(lmaxo)
 		Lmaxi.append(lmaxi)
-	return [Lmax_struc_corr], Lmax_corr, Lmaxo, Lmaxi
+	return Lmax_struc_corr, Lmax_corr, Lmaxo, Lmaxi
 
 def FCDMAD(clines, n_comp):
 	str0 = check_category(clines.pop(0), 'FCDMAD')
@@ -277,10 +277,10 @@ def FCDMAD(clines, n_comp):
 
 	# IQ, ITA, ASA, EMM, ENR, ER, EMADL
 	del clines[0:1]
-	ASA, EMM, ENR, ER, EMADL = zip(*[tokenizer(clines.pop(0), even=0)[2:] for iq in n_comp for ita in range(n_comp[iq])])
+	ASA, EMM, ENR, ER, EMADL = zip(*[list(map(float, tokenizer(clines.pop(0), even=0)[2:])) for iq in n_comp for ita in range(n_comp[iq])])
 
 
-	return [lmax], Lmax_struc_corr, Lmax_corr, Lmaxo, Lmaxi, ASA, EMM, ENR, ER, EMADL
+	return lmax, Lmax_struc_corr, Lmax_corr, Lmaxo, Lmaxi, ASA, EMM, ENR, ER, EMADL
 
 def STRESS(clines):
 	return 0
@@ -290,38 +290,38 @@ def TOTALE(clines, n_comp):
 	Comp_info, Ts, Kinetic, Hartree, LDA, PBE, P07, AM5, LAG, Tot_LDA, Tot_PBE, Tot_P07, Tot_AM5, Tot_LAG = [],[],[],[],[],[],[],[],[],[],[],[],[],[]
 	for iq in n_comp:
 		for ita in range(n_comp[iq]):
-			Comp_info.append(tokenizer(clines.pop(0))[0:3])
+			Comp_info.append(list(map(float, tokenizer(clines.pop(0))[0:3])))
 			del clines[0:1]
 			# Ts
-			Ts.append(tokenizer(clines.pop(0))[0])
+			Ts.append(float(tokenizer(clines.pop(0))[0]))
 			# Kinetic
-			Kinetic.append(tokenizer(clines.pop(0))[0])
+			Kinetic.append(float(tokenizer(clines.pop(0))[0]))
 			# Hartree
-			Hartree.append(tokenizer(clines.pop(0))[0])
+			Hartree.append(float(tokenizer(clines.pop(0))[0]))
 			# LDA
-			LDA.append(tokenizer(clines.pop(0))[0])
+			LDA.append(float(tokenizer(clines.pop(0))[0]))
 			# PBE
-			PBE.append(tokenizer(clines.pop(0))[0])
+			PBE.append(float(tokenizer(clines.pop(0))[0]))
 			# P07
-			P07.append(tokenizer(clines.pop(0))[0])
+			P07.append(float(tokenizer(clines.pop(0))[0]))
 			# AM5
-			AM5.append(tokenizer(clines.pop(0))[0])
+			AM5.append(float(tokenizer(clines.pop(0))[0]))
 			# LAG
-			LAG.append(tokenizer(clines.pop(0))[0])
+			LAG.append(float(tokenizer(clines.pop(0))[0]))
 			# Tot LDA
-			Tot_LDA.append(tokenizer(clines.pop(0), spl='Tot')[0])
+			Tot_LDA.append(float(tokenizer(clines.pop(0), spl='Tot')[0]))
 			del clines[0:1]
 			# Tot PBE
-			Tot_PBE.append(tokenizer(clines.pop(0), spl='Tot')[0])
+			Tot_PBE.append(float(tokenizer(clines.pop(0), spl='Tot')[0]))
 			del clines[0:1]
 			# Tot P07
-			Tot_P07.append(tokenizer(clines.pop(0), spl='Tot')[0])
+			Tot_P07.append(float(tokenizer(clines.pop(0), spl='Tot')[0]))
 			del clines[0:1]
 			# Tot AM5
-			Tot_AM5.append(tokenizer(clines.pop(0), spl='Tot')[0])
+			Tot_AM5.append(float(tokenizer(clines.pop(0), spl='Tot')[0]))
 			del clines[0:1]
 			# Tot LAG
-			Tot_LAG.append(tokenizer(clines.pop(0), spl='Tot')[0])
+			Tot_LAG.append(float(tokenizer(clines.pop(0), spl='Tot')[0]))
 			del clines[0:1]
 	
 	total_sum = (clines[0].strip().split(':')[0] == '*Total energy')
@@ -329,22 +329,22 @@ def TOTALE(clines, n_comp):
 	if total_sum:
 		del clines[0:1]
 		# Tot LDA
-		Tot_LDA = tokenizer(clines.pop(0), spl=' ')[1]
+		Sys_LDA = tokenizer(clines.pop(0), spl=' ')[1]
 		del clines[0:1]
 		# Tot PBE
-		Tot_PBE = tokenizer(clines.pop(0), spl=' ')[1]
+		Sys_PBE = tokenizer(clines.pop(0), spl=' ')[1]
 		del clines[0:1]
 		# Tot P07
-		Tot_P07 = tokenizer(clines.pop(0), spl=' ')[1]
+		Sys_P07 = tokenizer(clines.pop(0), spl=' ')[1]
 		del clines[0:1]
 		# Tot AM5
-		Tot_AM5 = tokenizer(clines.pop(0), spl=' ')[1]
+		Sys_AM5 = tokenizer(clines.pop(0), spl=' ')[1]
 		del clines[0:1]
 		# Tot LAG
-		Tot_LAG = tokenizer(clines.pop(0), spl=' ')[1]
+		Sys_LAG = tokenizer(clines.pop(0), spl=' ')[1]
 		del clines[0:1]
 
-		Tot_Energy = [Tot_LDA, Tot_PBE, Tot_P07, Tot_AM5, Tot_LAG]
+		Tot_Energy = list(map(float ,[Sys_LDA, Sys_PBE, Sys_P07, Sys_AM5, Sys_LAG]))
 
 	sigma_opt = (clines[0][0:15].strip().split(':')[0] == 'STRESS')
 	if sigma_opt:
