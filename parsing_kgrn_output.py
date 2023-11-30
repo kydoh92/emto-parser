@@ -31,21 +31,19 @@ if hp_type is 'Fe':
 	afm = 'F'
 	ntnta = [['Fe','Ni']]
 	zmsh = 'C'
-	lmax = 3
 elif hp_type is 'Al':
 	ns = 2
 	nq = 8
 	afm = 'F'
 	ntnta = [['Al'],['Co'],['Co'],['Co'],['Co'],['Co'],['Co'],['Al']]
 	zmsh = 'C'
-	lmax = 3
 
 # extract info.
 values = list()
 
 while clist != []:
 	a = len(clist)
-	value = [CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax)]
+	value = [CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh)]
 	if value[0] is not None:
 		values.append(value[0])
 	b = len(clist)
