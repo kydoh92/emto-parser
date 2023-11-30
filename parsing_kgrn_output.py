@@ -42,11 +42,6 @@ elif hp_type is 'Al':
 
 # extract info.
 values = list()
-#values.append(MLTPM1(clist,ns,nq))
-#for iq in range(nq):
-#	MLTPM2(clist)
-#values.append(OPTPOT(clist,ns))
-#values.append(KGRN1(clist,afm))
 
 while clist != []:
 	a = len(clist)
@@ -55,14 +50,7 @@ while clist != []:
 		values.append(value[0])
 	b = len(clist)
 	print(values[-1][0][0],a-b)
-	#if values[-1][0][0] == 'FCDPTH':
-	#	break # 뒷 부분 category 처리 함수가 작성 중
-	#elif values[-1][0][0] == 'KKRFCD':
-	#	break # 뒷 부분 category 처리 함수가 작성 중
 
 for v in values:
 	print(v)
 
-#print(values)
-#print(clist[0])
-#print(ut.category_cognition(clist[0]))
