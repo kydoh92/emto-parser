@@ -3,7 +3,7 @@ import utils as ut
 from utils import tokenizer, tokenizer2, check_category
 from utils import category_cognition, category_classify
 
-def CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax):
+def CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh):
 	# pre-processing
 	while category_cognition(clist[0]) is 0:
 		del(clist[0])
@@ -24,7 +24,7 @@ def CALL_CATEGORY(clist, nq, afm, ns, ntnta, zmsh, lmax):
 	elif target == 'EBTOP':
 		return target, EBTOP(clist)
 	elif target == 'PRNPRM':
-		return target, PRNPRM(clist, ntnta, zmsh, lmax)
+		return target, PRNPRM(clist, ntnta, zmsh)
 	# flushing categories
 	elif target == 'MLTPM2': 
 		return FLUSH(clist)
@@ -111,7 +111,7 @@ def EBTOP(clist):
 	bot,top = tokenizer2(clist.pop(0), even=0)
 	return [bot,top]
 
-def PRNPRM(clist, ntnta, zmsh, lmax):
+def PRNPRM(clist, ntnta, zmsh, lmax=3):
 	if lmax > 3:
 		raise KeyError(f'{lmax} > 3 is Not implemented yet!')
 	
